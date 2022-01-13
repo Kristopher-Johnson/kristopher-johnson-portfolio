@@ -1,0 +1,20 @@
+.card {
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  color: white;
+  margin: 20px 20px 20px 50px;
+  width: 50%;
+  /* max-width: 1000px; */
+  border-width: 2px;
+  border-color: #1e065e;
+  border-style: solid;
+  background-color: #727577;
+}
+
+ul:first-child {
+  margin-top: 200px;
+}
+ul {
+  display: flex;
+}
