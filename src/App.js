@@ -11,6 +11,7 @@ function App() {
     <Fragment>
       <Header />
       <Projects />
+      <div></div>
     </Fragment>
   );
 }
