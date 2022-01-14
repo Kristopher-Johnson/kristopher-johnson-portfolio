@@ -4,8 +4,14 @@ const ProjectListDescription = (props) => {
   return (
     <div className={classes.section}>
       <div className={classes.inputs}>
-        <input></input>
-        <input></input>
+        <input value="Search" />
+        <select>
+          <option>All</option>
+          <option>Java</option>
+          <option>React</option>
+          <option>HTML + CSS + JavaScript</option>
+          <option>C</option>
+        </select>
       </div>
     </div>
   );
