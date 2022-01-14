@@ -1,5 +1,4 @@
 import ProjectElement from "./ProjectElement";
-import Card from "../../../UI/Card";
 import classes from "./ProjectList.module.css";
 
 const DUMMY_PROJECTS = [
@@ -46,7 +45,7 @@ const ProjectList = (props) => {
   ));
 
   return (
-    <section className={classes.table}>
+    <section className={classes.list}>
       <ul>{projectList}</ul>
     </section>
   );

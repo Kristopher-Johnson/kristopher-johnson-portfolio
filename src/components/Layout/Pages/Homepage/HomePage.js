@@ -4,7 +4,7 @@ const HomePage = (props) => {
   return (
     <div className={classes.center}>
       <div className={classes.content}>
-        <p1>This is some content about my page</p1>;
+        <p>This is some content about my page</p>
       </div>
     </div>
   );

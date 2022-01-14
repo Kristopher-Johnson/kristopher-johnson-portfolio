@@ -1,6 +1,5 @@
-.list {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-left: 200px;
+.projects {
+  position: relative;
+  top: 130px;
+  padding-top: 30px;
 }

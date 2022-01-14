@@ -4,7 +4,7 @@ const ProjectListDescription = (props) => {
   return (
     <div className={classes.section}>
       <div className={classes.inputs}>
-        <input value="Search" />
+        <input type="text" id="Search" defaultValue="Search" name="Search" />
         <select>
           <option>All</option>
           <option>Java</option>

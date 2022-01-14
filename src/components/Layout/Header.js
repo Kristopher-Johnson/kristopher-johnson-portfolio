@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import classes from "./Header.module.css";
+import { Link } from "react-router-dom";
 
 const Header = (props) => {
   return (
@@ -9,12 +10,24 @@ const Header = (props) => {
           <h1>Kristopher Johnson</h1>
           <h1>Portfolio</h1>
         </div>
-        <ul className={classes.nav}>
-          <li>Home</li>
-          <li>Projects</li>
-          <li>About</li>
-          <li>CV</li>
-        </ul>
+        <nav>
+          <ul className={classes.nav}>
+            <Link to="/">
+              <li>Home</li>
+            </Link>
+            <Link to="projects">
+              <li>Projects</li>
+            </Link>
+            <Link to="about">
+              <li>About</li>
+            </Link>
+            <li>
+              <a href="/text.txt" download>
+                CV
+              </a>
+            </li>
+          </ul>
+        </nav>
       </header>
     </Fragment>
   );
