@@ -1,9 +1,11 @@
 import ProjectList from "./ProjectList";
+import ProjectListDescription from "./ProjectListDescription";
+import classes from "./Projects.module.css";
 
 const Projects = (props) => {
   return (
     <div>
-      {/* <ProjectListDescription/> */}
+      <ProjectListDescription />
       <ProjectList />
     </div>
   );

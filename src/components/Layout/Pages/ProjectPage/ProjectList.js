@@ -46,8 +46,8 @@ const ProjectList = (props) => {
   ));
 
   return (
-    <section>
-      <ul className="classes.list">{projectList}</ul>
+    <section className={classes.table}>
+      <ul>{projectList}</ul>
     </section>
   );
 };
