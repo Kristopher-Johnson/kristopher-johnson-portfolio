@@ -1,0 +1,14 @@
+.section {
+  position: relative;
+  top: 130px;
+
+  height: 50px;
+  width: 50vw;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
