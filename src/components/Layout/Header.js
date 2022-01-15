@@ -21,11 +21,9 @@ const Header = (props) => {
             <Link to="about">
               <li>About</li>
             </Link>
-            <li>
-              <a href="/text.txt" download>
-                CV
-              </a>
-            </li>
+            <a href="/text.txt" download>
+              <li>CV</li>
+            </a>
           </ul>
         </nav>
       </header>
