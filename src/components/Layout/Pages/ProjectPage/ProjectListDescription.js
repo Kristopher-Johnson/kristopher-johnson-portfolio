@@ -2,6 +2,23 @@ import classes from "./ProjectListDescription.module.css";
 import SearchBar from "../../../Function/SearchBar";
 
 const ProjectListDescription = (props) => {
+  let languages = [];
+  const languageList = props.DUMMY_PROJECTS.map((project) => {
+    return project.language.map((lang) => {
+      console.log(languages);
+      if (!languages.includes(lang)) {
+        languages.push(lang);
+        return (
+          <option key={lang} value={lang}>
+            {lang}
+          </option>
+        );
+      }
+    });
+  });
+
+  const cycleThroughLanguages = () => {};
+
   return (
     <div className={classes.section}>
       <div className={classes.inputs}>
@@ -14,12 +31,7 @@ const ProjectListDescription = (props) => {
         />
         <select onChange={(event) => props.onSort(event.target.value)}>
           <option>All</option>
-          <option>Java</option>
-          <option>React</option>
-          <option>HTML</option>
-          <option>CSS</option>
-          <option>JavaScript</option>
-          <option>C</option>
+          {languageList}
         </select>
       </div>
     </div>

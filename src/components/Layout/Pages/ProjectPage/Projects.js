@@ -32,6 +32,13 @@ const DUMMY_PROJECTS = [
     language: ["HTML", "CSS", "JavaScript"],
     image: "",
   },
+  {
+    id: "p5",
+    name: "test",
+    description: "this is a test",
+    language: ["C", "C++"],
+    image: "",
+  },
 ];
 
 const Projects = (props) => {
@@ -76,7 +83,11 @@ const Projects = (props) => {
 
   return (
     <div className={classes.projects}>
-      <ProjectListDescription onSort={sortList} onSearch={searchList} />
+      <ProjectListDescription
+        onSort={sortList}
+        onSearch={searchList}
+        DUMMY_PROJECTS={DUMMY_PROJECTS}
+      />
 
       <ProjectList sortFilter={whichFilter()} DUMMY_PROJECTS={DUMMY_PROJECTS} />
     </div>
