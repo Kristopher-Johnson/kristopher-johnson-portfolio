@@ -1,11 +1,17 @@
 import classes from "./ProjectListDescription.module.css";
-import { useState } from "react";
+import SearchBar from "../../../Function/SearchBar";
 
 const ProjectListDescription = (props) => {
   return (
     <div className={classes.section}>
       <div className={classes.inputs}>
-        <input type="text" id="Search" defaultValue="Search" name="Search" />
+        <SearchBar
+          type="text"
+          id="Search"
+          defaultValue="Search"
+          name="Search"
+          onSearch={props.onSearch}
+        />
         <select onChange={(event) => props.onSort(event.target.value)}>
           <option>All</option>
           <option>Java</option>

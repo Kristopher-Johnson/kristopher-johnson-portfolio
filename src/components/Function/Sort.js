@@ -1,10 +1,4 @@
-import React from "react";
-import ProjectElement from "../Layout/Pages/ProjectPage/ProjectElement";
-
-// Compare function needed by the Sort component
 const filter = (list, by) => {
-  // you can access the relevant property like this a.props[by]
-  // depending whether you are sorting by tilte or year, you can write a compare function here,
   let projectList = [];
   let i = 0;
   while (i < list.length) {
@@ -17,12 +11,43 @@ const filter = (list, by) => {
   return projectList;
 };
 
-const Sort = (props) => {
-  //   return props.children;
-  if (props.by === "All") {
-    return props.children;
+const search = (list, by) => {
+  let projectList = [];
+  let i = 0;
+  while (i < list.length) {
+    // console.log(by);
+    // console.log(list[i]);
+
+    if (
+      list[i].props.name.toLowerCase().includes(by) ||
+      list[i].props.description.toLowerCase().includes(by) ||
+      list[i].props.language.find((element) => {
+        console.log(element);
+        return element.toLowerCase().includes(by);
+      })
+    ) {
+      projectList.push(list[i]);
+    }
+
+    i++;
   }
-  return filter(props.children, props.by);
+
+  return projectList;
+};
+
+const Sort = (props) => {
+  if (props.sort[0] === true) {
+    if (props.sort[1] === "All") {
+      return props.children;
+    }
+    return filter(props.children, props.sort[1]);
+  } else {
+    if (props.sort[1] === "") {
+      //   console.log("here");
+      return props.children;
+    }
+    return search(props.children, props.sort[1].toLowerCase());
+  }
 };
 
 export default Sort;
