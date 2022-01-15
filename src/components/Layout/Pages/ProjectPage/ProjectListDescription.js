@@ -5,7 +5,7 @@ const ProjectListDescription = (props) => {
   let languages = [];
   const languageList = props.DUMMY_PROJECTS.map((project) => {
     return project.language.map((lang) => {
-      console.log(languages);
+      // console.log(languages);
       if (!languages.includes(lang)) {
         languages.push(lang);
         return (
@@ -14,26 +14,27 @@ const ProjectListDescription = (props) => {
           </option>
         );
       }
+      return [];
     });
   });
 
-  const cycleThroughLanguages = () => {};
-
   return (
     <div className={classes.section}>
-      <div className={classes.inputs}>
-        <SearchBar
-          type="text"
-          id="Search"
-          defaultValue="Search"
-          name="Search"
-          onSearch={props.onSearch}
-        />
-        <select onChange={(event) => props.onSort(event.target.value)}>
-          <option>All</option>
-          {languageList}
-        </select>
-      </div>
+      <SearchBar
+        type="text"
+        id="Search"
+        defaultValue="Search"
+        name="Search"
+        onSearch={props.onSearch}
+        className={classes.inputs}
+      />
+      <select
+        className={classes.inputs}
+        onChange={(event) => props.onSort(event.target.value)}
+      >
+        <option>All</option>
+        {languageList}
+      </select>
     </div>
   );
 };

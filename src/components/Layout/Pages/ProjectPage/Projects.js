@@ -7,7 +7,8 @@ const DUMMY_PROJECTS = [
   {
     id: "p1",
     name: "Student Mark Calculator",
-    description: "Student Mark Calculator",
+    description:
+      "This is a description about this project which is a student marks calculator, this program calculates student grades based on the input.",
     language: ["Java"],
     image: "",
   },
@@ -32,23 +33,19 @@ const DUMMY_PROJECTS = [
     language: ["HTML", "CSS", "JavaScript"],
     image: "",
   },
-  {
-    id: "p5",
-    name: "test",
-    description: "this is a test",
-    language: ["C", "C++"],
-    image: "",
-  },
+  // {
+  //   id: "p5",
+  //   name: "test",
+  //   description: "this is a test",
+  //   language: ["C", "C++"],
+  //   image: "",
+  // },
 ];
 
 const Projects = (props) => {
   const [listFilter, setListFilter] = useState("All");
   const [searchFilter, setSearchFilter] = useState("");
   const [thisFilter, setThisFilter] = useState(true);
-
-  // const { search } = window.location;
-  // const query = new URLSearchParams(search).get("s");
-  // const [searchQuery, setSearchQuery] = useState(query || "");
 
   const sortList = (language) => {
     setListFilter(language);
@@ -70,26 +67,20 @@ const Projects = (props) => {
     }
   };
 
-  // const searchProjects = (projects, query) => {
-  //   if (!query) {
-  //     return projects;
-  //   }
-
-  //   return projects.filter((project) => {
-  //     const projectName = project.name.toLowerCase();
-  //     return projectName.includes(query);
-  //   });
-  // };
-
   return (
     <div className={classes.projects}>
-      <ProjectListDescription
-        onSort={sortList}
-        onSearch={searchList}
-        DUMMY_PROJECTS={DUMMY_PROJECTS}
-      />
+      <div className={classes.inline}>
+        <ProjectListDescription
+          onSort={sortList}
+          onSearch={searchList}
+          DUMMY_PROJECTS={DUMMY_PROJECTS}
+        />
 
-      <ProjectList sortFilter={whichFilter()} DUMMY_PROJECTS={DUMMY_PROJECTS} />
+        <ProjectList
+          sortFilter={whichFilter()}
+          DUMMY_PROJECTS={DUMMY_PROJECTS}
+        />
+      </div>
     </div>
   );
 };

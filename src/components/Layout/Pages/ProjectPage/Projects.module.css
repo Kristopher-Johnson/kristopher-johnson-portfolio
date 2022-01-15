@@ -1,5 +1,23 @@
+.projects,
+.inline {
+  /* border-style: dotted; */
+}
+
 .projects {
   position: relative;
-  top: 130px;
-  padding-top: 30px;
+
+  top: -10;
+  /* padding-top: 30px; */
+  border-color: aqua;
+
+  margin: 10%;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.inline {
+  /* position: relative; */
+  /* width: 60vw; */
+  border-color: aqua;
+  display: inline-block;
 }

@@ -1,15 +1,98 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.outer,
+.cardHeader,
+.cardDescription,
+.project,
+.cardImage {
+  /* border-style: solid; */
+  /* min-height: 6vh; */
+}
+
+.outer {
+  position: relative;
+  border-color: rgb(74, 108, 109);
+  padding: 0.2%;
+  /* width: 1000px; */
+}
+
+.cardHeader {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  border-color: cadetblue;
+  border-bottom: rgb(255, 255, 255);
+  border-bottom: solid;
+  /* padding-right: 5%; */
+}
+
+.cardHeader h3 {
+  margin: 0 0 0.5rem 0;
+  align-items: flex-start;
+}
+
+.cardDescription {
+  border-color: rgb(109, 181, 184);
+  font-style: italic;
+  margin-bottom: 1rem;
+  text-align: left;
+  width: 70%;
+  height: 100%;
+  /* white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; */
+}
+
+.cardDescription h4 {
+  margin-left: 1rem;
+  font-weight: normal;
+}
+
+.cardLanguages {
+  text-align: left;
+  list-style: none;
+  border-color: rgb(74, 108, 109);
+}
+
+.cardLanguages li {
+  list-style: none;
+}
+
+.cardImage {
+  border-color: rgb(74, 108, 109);
+  margin: 0;
+  outline: none;
+  border: none;
+}
+
+.cardImage img {
+  /* background-color: aliceblue; */
+}
+.cardHeader p {
+  /* position: absolute; */
+  /* display: flex; */
+
+  top: -10;
+  right: 10;
+  font-weight: bold;
+  font-size: larger;
+}
+/* 
 .project {
   display: flex;
   justify-content: space-between;
   margin: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid #ccc;
-}
+  padding: 1rem;
+} */
 
-.project h3 {
-  margin: 0 0 0.25rem 0;
-}
-
-.description {
-  font-style: italic;
-}
+/* .flexChild {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} */

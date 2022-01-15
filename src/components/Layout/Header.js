@@ -10,6 +10,7 @@ const Header = (props) => {
           <h1>Kristopher Johnson</h1>
           <h1>Portfolio</h1>
         </div>
+
         <nav>
           <ul className={classes.nav}>
             <Link to="/">
