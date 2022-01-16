@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 .card {
   position: relative;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
@@ -12,13 +8,8 @@
   border-color: #1e065e;
   border-style: solid;
   background-color: #727577;
+  /* width: 45vw; */
   padding: 2%;
-}
-
-.card:hover {
-  cursor: pointer;
-}
-
-.card:focus {
-  color: rebeccapurple;
+  /* min-width: 44vw; */
+  /* min-height: 10vh; */
 }

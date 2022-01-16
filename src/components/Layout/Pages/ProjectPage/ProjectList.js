@@ -25,25 +25,12 @@ const ProjectList = React.forwardRef((props, ref) => {
   // }
 
   return (
-    <section className={classes.list}>
-      <ul>
-        {projectList}
-        <div className={classes.width} />
-        {/* <ProjectElement
-          key={"empty"}
-          id={"empty"}
-          name={"empty"}
-          description={
-            "This is a description about this project which is a student marks calculator, this program calculates student grades based on the input."
-          }
-          language={[]}
-          image={
-            "http://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif"
-          }
-          className={classes.empty}
-        /> */}
-      </ul>
-    </section>
+    // <section className={classes.list}>
+    <ul>
+      {projectList}
+      <div className={classes.width} />
+    </ul>
+    // </section>
   );
 });
 

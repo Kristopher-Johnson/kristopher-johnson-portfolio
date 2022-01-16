@@ -1,6 +1,6 @@
 .projects,
 .inline {
-  /* border-style: dotted; */
+  border-style: dotted;
 }
 
 .projects {
@@ -9,15 +9,22 @@
   top: -10;
   /* padding-top: 30px; */
   border-color: aqua;
-
+  /* display: grid; */
   margin: 10%;
   margin-top: 5%;
   text-align: center;
 }
 
 .inline {
-  /* position: relative; */
-  /* width: 60vw; */
+  /* margin-left: 17%; */
+  /* margin-right: 17%; */
+  display: grid;
+  justify-content: space-evenly;
+
+  align-items: center;
+  /* margin: 10%; */
+  min-width: 100%;
+  /* text-align: center; */
   border-color: aqua;
-  display: inline-block;
+  /* display: inline-block; */
 }

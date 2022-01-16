@@ -1,6 +1,6 @@
 .section,
 .inputs {
-  /* border-style: dotted; */
+  border-style: dotted;
 }
 
 .section {
@@ -12,6 +12,8 @@
   /* text-align: center; */
   /* width: 1000px; */
   /* padding: 0.2%; */
+
+  /* min-width: 100%; */
 }
 
 .inputs {
@@ -26,5 +28,7 @@
   font-size: 16px;
   padding-left: 1%;
   margin: 10px;
+  justify-self: start;
+
   /* max-width: 350px; */
 }

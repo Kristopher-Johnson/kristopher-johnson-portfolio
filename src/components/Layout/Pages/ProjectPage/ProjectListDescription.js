@@ -3,19 +3,24 @@ import SearchBar from "../../../Function/SearchBar";
 
 const ProjectListDescription = (props) => {
   let languages = [];
-  const languageList = props.DUMMY_PROJECTS.map((project) => {
-    return project.language.map((lang) => {
-      // console.log(languages);
-      if (!languages.includes(lang)) {
-        languages.push(lang);
-        return (
-          <option key={lang} value={lang}>
-            {lang}
-          </option>
-        );
-      }
-      return [];
+
+  function languageListAlphabetical(arr) {
+    props.DUMMY_PROJECTS.map((project) => {
+      project.language.map((lang) => {
+        if (!arr.includes(lang)) {
+          arr.push(lang);
+        }
+      });
     });
+    return arr.sort();
+  }
+
+  const languageOptionArray = languageListAlphabetical(languages).map((a) => {
+    return (
+      <option key={a} value={a}>
+        {a}
+      </option>
+    );
   });
 
   return (
@@ -33,7 +38,7 @@ const ProjectListDescription = (props) => {
         onChange={(event) => props.onSort(event.target.value)}
       >
         <option>All</option>
-        {languageList}
+        {languageOptionArray}
       </select>
     </div>
   );

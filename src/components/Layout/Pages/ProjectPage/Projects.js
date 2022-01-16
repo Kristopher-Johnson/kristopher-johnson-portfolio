@@ -2,22 +2,25 @@ import ProjectList from "./ProjectList";
 import ProjectListDescription from "./ProjectListDescription";
 import classes from "./Projects.module.css";
 import { useState } from "react";
+import styled from "styled-components";
 
 const DUMMY_PROJECTS = [
   {
     id: "p1",
     name: "Student Mark Calculator",
     description:
-      "This is a description about this project which is a student marks calculator, this program calculates student grades based on the input.",
-    language: ["Java"],
-    image: "",
+      "This is a description about this project which is a student marks calculator, this program calculates student grades based on the input. I am now adding some more description to test the truncate text withing the project element component this is just a tast i need these work to see how the element looks when i have lots of charactor it should truncate in this description exceeds 200 charactor cuurrently.",
+    language: ["HTML", "CSS", "JavaScript", "C", "Ruby", "C++", "C", "test"],
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/f/f3/Frank_Mcgee_photo.jpg",
   },
   {
     id: "p2",
     name: "Hotel Managment System",
     description: "Hotel Managment System",
     language: ["Java"],
-    image: "",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Catedral_de_San_Juan%2C_Breslavia%2C_Polonia%2C_2017-12-20%2C_DD_09-11_HDR.jpg/2880px-Catedral_de_San_Juan%2C_Breslavia%2C_Polonia%2C_2017-12-20%2C_DD_09-11_HDR.jpg",
   },
   {
     id: "p3",

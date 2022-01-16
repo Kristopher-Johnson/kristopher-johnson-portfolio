@@ -8,7 +8,7 @@
 .cardHeader,
 .cardDescription,
 .project,
-.cardImage {
+.cardImage .card {
   /* border-style: solid; */
   /* min-height: 6vh; */
 }
@@ -30,17 +30,35 @@
   /* padding-right: 5%; */
 }
 
+.cardHeader p {
+  position: absolute;
+  /* display: flex; */
+  top: -20%;
+  right: -1%;
+  /* top: -10; */
+  /* right: 10; */
+  font-weight: bold;
+  font-size: 40px;
+  border-color: black;
+  /* border-style: dashed; */
+}
+
 .cardHeader h3 {
   margin: 0 0 0.5rem 0;
   align-items: flex-start;
 }
 
+.outer:hover {
+  cursor: pointer;
+}
+
 .cardDescription {
   border-color: rgb(109, 181, 184);
   font-style: italic;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   text-align: left;
   width: 70%;
+  max-width: 50em;
   height: 100%;
   /* white-space: nowrap;
   overflow: hidden;
@@ -60,6 +78,7 @@
 
 .cardLanguages li {
   list-style: none;
+  font-weight: normal;
 }
 
 .cardImage {
@@ -67,20 +86,24 @@
   margin: 0;
   outline: none;
   border: none;
+  padding: 0;
+  /* width: 10%; */
+  height: 100%;
+  max-width: 7.5em;
+  max-height: 7.5em;
+  min-width: 7.5em;
+  min-height: 7.5em;
+  display: flex;
+  margin-right: 3%;
 }
 
 .cardImage img {
   /* background-color: aliceblue; */
-}
-.cardHeader p {
-  /* position: absolute; */
-  /* display: flex; */
+  width: 100%;
 
-  top: -10;
-  right: 10;
-  font-weight: bold;
-  font-size: larger;
+  /* height: 100%; */
 }
+
 /* 
 .project {
   display: flex;
