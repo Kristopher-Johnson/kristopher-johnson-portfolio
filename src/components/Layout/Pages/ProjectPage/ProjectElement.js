@@ -1,5 +1,6 @@
 import classes from "./ProjectElement.module.css";
 import Card from "../../../UI/Card";
+import { Container, SearchInput } from "../../../UI/Styles";
 // import CardExpanded from "../../../UI/CardExpanded";
 
 const ProjectElement = (props) => {
@@ -10,13 +11,11 @@ const ProjectElement = (props) => {
       if (!arr.includes(lang)) {
         arr.push(lang);
       }
+      return [];
     });
 
     return arr.sort();
   }
-
-  let arr = [];
-  console.log(languageListAlphabetical(languages));
 
   const languageOptionArray = languageListAlphabetical(languages).map((a) => {
     return (
@@ -36,7 +35,7 @@ const ProjectElement = (props) => {
       str = str.slice(0, languageListLength);
       str = str.map((a) => {
         let returnValue = { ...a };
-        if (a == str[str.length - 1]) {
+        if (a === str[str.length - 1]) {
           return (
             <li key={a.key} value={a.value}>
               {a.props.children}...
@@ -47,12 +46,14 @@ const ProjectElement = (props) => {
       });
     }
     return str;
-
-    // return str;
   };
 
+  function onClickTest() {
+    console.log("Clicked");
+  }
+
   return (
-    <div>
+    <div onClick={onClickTest}>
       <Card>
         <div className={classes.outer}>
           <div className={classes.cardHeader}>
@@ -68,27 +69,17 @@ const ProjectElement = (props) => {
             <div className={classes.cardImage}>
               <img
                 src={props.image}
+                alt=""
                 onError={({ currentTarget }) => {
-                  currentTarget.onerror = null; // prevents looping
+                  currentTarget.onerror = null;
                   currentTarget.src =
                     "https://upload.wikimedia.org/wikipedia/commons/archive/a/ac/20070325222640%21No_image_available.svg";
                 }}
-                // onerror={((this.onerror = null), (this.src = "Default.jpg"))}
               />
             </div>
             <p>–+</p>
           </div>
         </div>
-        {/* <div >
-        
-      </div>
-      <li >
-        <div>
-          
-
-          
-        </div>
-      </li> */}
       </Card>
     </div>
   );

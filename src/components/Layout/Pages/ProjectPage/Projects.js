@@ -2,7 +2,7 @@ import ProjectList from "./ProjectList";
 import ProjectListDescription from "./ProjectListDescription";
 import classes from "./Projects.module.css";
 import { useState } from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
 
 const DUMMY_PROJECTS = [
   {

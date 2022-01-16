@@ -10,7 +10,9 @@ const ProjectListDescription = (props) => {
         if (!arr.includes(lang)) {
           arr.push(lang);
         }
+        return [];
       });
+      return [];
     });
     return arr.sort();
   }

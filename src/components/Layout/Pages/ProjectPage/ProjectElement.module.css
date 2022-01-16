@@ -9,7 +9,7 @@
 .cardDescription,
 .project,
 .cardImage .card {
-  /* border-style: solid; */
+  border-style: solid;
   /* min-height: 6vh; */
 }
 
@@ -27,6 +27,7 @@
   border-color: cadetblue;
   border-bottom: rgb(255, 255, 255);
   border-bottom: solid;
+  padding-bottom: 0.4%;
   /* padding-right: 5%; */
 }
 

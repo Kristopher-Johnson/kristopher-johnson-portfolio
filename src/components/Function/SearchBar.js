@@ -1,4 +1,4 @@
-import classes from "./SearchBar.module.css";
+// import classes from "./SearchBar.module.css";
 
 const SearchBar = (props) => {
   return (
