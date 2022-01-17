@@ -22,10 +22,15 @@ const search = (list, by) => {
       list[i].props.name.toLowerCase().includes(by) ||
       list[i].props.description.toLowerCase().includes(by) ||
       list[i].props.language.find((element) => {
-        console.log(element);
+        // console.log(element);
+        return element.toLowerCase().includes(by);
+      }) ||
+      list[i].props.tags.find((element) => {
+        // console.log(element);
         return element.toLowerCase().includes(by);
       })
     ) {
+      console.log(list[i]);
       projectList.push(list[i]);
     }
 

@@ -19,6 +19,7 @@ const ProjectList = React.forwardRef((props, ref) => {
           name={project.name}
           description={project.description}
           language={project.language}
+          tags={project.tags}
           image={project.image}
         />
       ))}
@@ -39,7 +40,7 @@ const ProjectList = React.forwardRef((props, ref) => {
 
     <ul>
       {projectList}
-      <div className={classes.width} />
+      {/* <div className={classes.width} /> */}
       <Container
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
