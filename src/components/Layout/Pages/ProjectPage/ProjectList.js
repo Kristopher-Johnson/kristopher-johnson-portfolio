@@ -1,10 +1,7 @@
 import ProjectElement from "./ProjectElement";
-import classes from "./ProjectList.module.css";
 import Sort from "../../../Function/Sort";
-import React, { useState, useRef, useEffect } from "react";
-import { Container, SearchInput } from "../../../UI/Styles";
 
-const ProjectList = React.forwardRef((props, ref) => {
+const ProjectList = (props) => {
   function expandOnClick() {
     console.log("test");
   }
@@ -41,6 +38,6 @@ const ProjectList = React.forwardRef((props, ref) => {
     </ul>
     // </section>
   );
-});
+};
 
 export default ProjectList;

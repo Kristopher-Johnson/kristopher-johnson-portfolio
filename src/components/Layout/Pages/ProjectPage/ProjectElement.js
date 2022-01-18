@@ -1,10 +1,8 @@
 import classes from "./ProjectElement.module.css";
 import styles from "./ProjectElement-Expanded.module.css";
 import Card from "../../../UI/Card";
-import { Container, SearchInput } from "../../../UI/Styles";
 import { useState } from "react";
 // import CardExpanded from "../../../UI/CardExpanded";
-import { Link } from "react-router-dom";
 
 const ProjectElement = (props) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -97,7 +95,7 @@ const ProjectElement = (props) => {
               <h3>{props.name}</h3>
             </header>
             <div className={styles.cardArticle}>
-              <div>
+              <div className={styles.cardArticleWidth}>
                 <div className={styles.cardLanguages}>
                   <div>
                     <h4>Languages Used</h4>
@@ -107,7 +105,7 @@ const ProjectElement = (props) => {
                   </div>
 
                   <div className={styles.github}>
-                    <a href={props.github} target="_blank">
+                    <a href={props.github} target="_blank" rel="noreferrer">
                       <h4>Github</h4>
                     </a>
                   </div>
