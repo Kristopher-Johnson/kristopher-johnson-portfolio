@@ -46,6 +46,7 @@
   font-size: 2vw;
   min-width: 10vw;
   min-height: 3vh;
+  transition: filter 300ms;
 }
 
 .nav li,
@@ -59,7 +60,8 @@ a {
 
 .nav li:hover,
 a:hover {
-  background-color: orange;
+  /* background-color: orange; */
+  filter: brightness(1.1);
 }
 
 .nav li:active,

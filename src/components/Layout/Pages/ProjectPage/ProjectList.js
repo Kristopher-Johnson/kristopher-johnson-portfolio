@@ -5,10 +5,9 @@ import React, { useState, useRef, useEffect } from "react";
 import { Container, SearchInput } from "../../../UI/Styles";
 
 const ProjectList = React.forwardRef((props, ref) => {
-  const targetRef = useRef(null);
-  const [isHovered, setIsHovered] = useState(false);
-  const [isFocused, setIsFocused] = useState(false);
-  const showExpanded = isHovered || isFocused;
+  function expandOnClick() {
+    console.log("test");
+  }
 
   let projectList = (
     <Sort sort={props.sortFilter}>
@@ -21,6 +20,8 @@ const ProjectList = React.forwardRef((props, ref) => {
           language={project.language}
           tags={project.tags}
           image={project.image}
+          github={project.github}
+          expandOnClick={expandOnClick}
         />
       ))}
     </Sort>
@@ -31,25 +32,12 @@ const ProjectList = React.forwardRef((props, ref) => {
   //   projectList = <ProjectElement key={"empty"} />;
   // }
 
-  useEffect(() => {
-    targetRef.current.value = "";
-  }, [showExpanded]);
-
   return (
     // <section className={classes.list}>
 
     <ul>
       {projectList}
       {/* <div className={classes.width} /> */}
-      <Container
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        onFocus={() => setIsFocused(true)}
-        onBlur={() => setIsFocused(false)}
-        hover={showExpanded}
-      >
-        <SearchInput ref={targetRef} showExpanded={showExpanded} />
-      </Container>
     </ul>
     // </section>
   );

@@ -3,7 +3,9 @@ import classes from "./Card.module.css";
 const Card = (props) => {
   return (
     <form>
-      <div className={classes.card}>{props.children}</div>
+      <div className={!props.isExpanded ? classes.card : classes.cardExpanded}>
+        {props.children}
+      </div>
     </form>
   );
 };

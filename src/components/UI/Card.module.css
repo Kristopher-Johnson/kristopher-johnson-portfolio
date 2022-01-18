@@ -2,7 +2,8 @@
   box-sizing: border-box;
 }
 
-.card {
+.card,
+.cardExpanded {
   position: relative;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   border-radius: 14px;
@@ -13,13 +14,28 @@
   border-style: solid;
   background-color: #727577;
   padding: 2%;
-  /* width: 62em; */
 }
 
-.card:hover {
+.card {
+  /* width: 62em; */
+  /* width: clamp(100%, 1000px, 0%); */
+  width: 1000px;
+  display: inline-block;
+  /* justify-content: space-evenly; */
+}
+
+.cardExpanded {
+  /* width: clamp(100%, 1500px, 0%); */
+  height: 50rem;
+  width: 1500px;
+  /* display: inline-block; */
+}
+.card:hover,
+.cardExpanded:hover {
   cursor: pointer;
 }
 
-.card:focus {
+.card:focus,
+.cardExpanded:focus {
   color: rebeccapurple;
 }

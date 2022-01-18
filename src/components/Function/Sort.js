@@ -20,7 +20,8 @@ const search = (list, by) => {
 
     if (
       list[i].props.name.toLowerCase().includes(by) ||
-      list[i].props.description.toLowerCase().includes(by) ||
+      // list[i].props.description.toLowerCase().includes(by)
+      // ||
       list[i].props.language.find((element) => {
         // console.log(element);
         return element.toLowerCase().includes(by);
@@ -30,7 +31,7 @@ const search = (list, by) => {
         return element.toLowerCase().includes(by);
       })
     ) {
-      console.log(list[i]);
+      // console.log(list[i]);
       projectList.push(list[i]);
     }
 

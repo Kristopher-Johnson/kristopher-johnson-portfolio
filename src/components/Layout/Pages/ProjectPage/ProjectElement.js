@@ -1,9 +1,13 @@
 import classes from "./ProjectElement.module.css";
+import styles from "./ProjectElement-Expanded.module.css";
 import Card from "../../../UI/Card";
 import { Container, SearchInput } from "../../../UI/Styles";
+import { useState } from "react";
 // import CardExpanded from "../../../UI/CardExpanded";
+import { Link } from "react-router-dom";
 
 const ProjectElement = (props) => {
+  const [isExpanded, setIsExpanded] = useState(false);
   let languages = [];
 
   function languageListAlphabetical(arr) {
@@ -19,9 +23,9 @@ const ProjectElement = (props) => {
 
   const languageOptionArray = languageListAlphabetical(languages).map((a) => {
     return (
-      <option key={a} value={a}>
+      <li key={a} value={a}>
         {a}
-      </option>
+      </li>
     );
   });
 
@@ -48,41 +52,87 @@ const ProjectElement = (props) => {
     return str;
   };
 
-  function onClickTest() {
-    console.log("Clicked");
-  }
+  console.log(isExpanded);
 
-  return (
-    <div onClick={onClickTest}>
-      <Card>
-        <div className={classes.outer}>
-          <div className={classes.cardHeader}>
-            <div className={classes.cardDescription}>
-              <h3>{props.name}</h3>
-              <h4>{truncateDescription(props.description)}</h4>
+  if (!isExpanded) {
+    return (
+      <div onClick={() => setIsExpanded(!isExpanded)}>
+        <Card isExpanded={isExpanded}>
+          <div className={classes.outer}>
+            <div className={classes.cardHeader}>
+              <div className={classes.cardDescription}>
+                <h3>{props.name}</h3>
+                <h4>{truncateDescription(props.description)}</h4>
+              </div>
+              <div className={classes.cardLanguages}>
+                <ul>
+                  <h4>{truncateLanguages(languageOptionArray)}</h4>
+                </ul>
+              </div>
+              <div className={classes.cardImage}>
+                <img
+                  src={props.image}
+                  alt=""
+                  onError={({ currentTarget }) => {
+                    currentTarget.onerror = null;
+                    currentTarget.src =
+                      "https://upload.wikimedia.org/wikipedia/commons/archive/a/ac/20070325222640%21No_image_available.svg";
+                  }}
+                />
+              </div>
+              <p>+</p>
             </div>
-            <div className={classes.cardLanguages}>
-              <ul>
-                <h4>{truncateLanguages(languageOptionArray)}</h4>
-              </ul>
-            </div>
-            <div className={classes.cardImage}>
-              <img
-                src={props.image}
-                alt=""
-                onError={({ currentTarget }) => {
-                  currentTarget.onerror = null;
-                  currentTarget.src =
-                    "https://upload.wikimedia.org/wikipedia/commons/archive/a/ac/20070325222640%21No_image_available.svg";
-                }}
-              />
-            </div>
-            <p>–+</p>
           </div>
-        </div>
-      </Card>
-    </div>
-  );
+        </Card>
+      </div>
+    );
+  }
+  if (isExpanded) {
+    return (
+      <div onClick={() => setIsExpanded(!isExpanded)}>
+        <Card isExpanded={isExpanded}>
+          <div className={styles.outer}>
+            <header className={styles.cardHeader}>
+              <p>–</p>
+              <h3>{props.name}</h3>
+            </header>
+            <div className={styles.cardArticle}>
+              <div>
+                <div className={styles.cardLanguages}>
+                  <div>
+                    <h4>Languages Used</h4>
+                    <ul className={styles.container}>
+                      <h4>{languageOptionArray}</h4>
+                    </ul>
+                  </div>
+
+                  <div className={styles.github}>
+                    <a href={props.github} target="_blank">
+                      <h4>Github</h4>
+                    </a>
+                  </div>
+                </div>
+                <div className={styles.cardDescription}>
+                  {props.description}
+                </div>
+              </div>
+              <div className={styles.cardImage}>
+                <img
+                  src={props.image}
+                  alt=""
+                  onError={({ currentTarget }) => {
+                    currentTarget.onerror = null;
+                    currentTarget.src =
+                      "https://upload.wikimedia.org/wikipedia/commons/archive/a/ac/20070325222640%21No_image_available.svg";
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+        </Card>
+      </div>
+    );
+  }
 };
 
 export default ProjectElement;

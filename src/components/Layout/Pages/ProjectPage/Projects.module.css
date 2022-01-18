@@ -18,16 +18,13 @@
 .inline {
   /* margin-left: 17%; */
   /* margin-right: 17%; */
-  display: inline-block;
+  display: grid;
   justify-content: space-evenly;
 
   align-items: center;
   /* margin: 10%; */
-  min-width: 100%;
+  /* min-width: 100%; */
   /* text-align: center; */
   border-color: aqua;
   /* display: inline-block; */
-  width: 1000px;
-  min-width: 0%;
-  max-width: 100%;
 }

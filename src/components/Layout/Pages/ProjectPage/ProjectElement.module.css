@@ -9,7 +9,7 @@
 .cardDescription,
 .project,
 .cardImage .card {
-  border-style: solid;
+  /* border-style: solid; */
   /* min-height: 6vh; */
 }
 
