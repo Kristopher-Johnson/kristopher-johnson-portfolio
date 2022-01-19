@@ -56,14 +56,10 @@
 .cardDescription {
   border-color: rgb(109, 181, 184);
   font-style: italic;
-  /* margin-bottom: 1rem; */
   text-align: left;
   width: 70%;
   max-width: 50em;
   height: 100%;
-  /* white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; */
 }
 
 .cardDescription h4 {

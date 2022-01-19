@@ -1,4 +1,3 @@
-import "./App.css";
 import Header from "./components/Layout/Header";
 import { Fragment } from "react";
 import HomePage from "./components/Layout/Pages/Homepage/HomePage";

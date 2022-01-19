@@ -5,6 +5,7 @@
 .card,
 .cardExpanded {
   position: relative;
+  margin: 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   border-radius: 14px;
   color: white;
@@ -17,18 +18,15 @@
 }
 
 .card {
-  /* width: 62em; */
-  /* width: clamp(100%, 1000px, 0%); */
-  width: 1000px;
+  width: 60rem;
   display: inline-block;
-  /* justify-content: space-evenly; */
 }
 
 .cardExpanded {
-  /* width: clamp(100%, 1500px, 0%); */
-  height: 50rem;
+  width: clamp(100%, 1000px, 0%);
   width: 1500px;
-  /* display: inline-block; */
+  height: 50rem;
+  display: inline-block;
 }
 .card:hover,
 .cardExpanded:hover {

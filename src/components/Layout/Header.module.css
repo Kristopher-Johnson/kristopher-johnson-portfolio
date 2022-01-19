@@ -31,8 +31,6 @@
   gap: 2%;
   align-items: flex-end;
   max-width: 60%;
-
-  /* max-height: 80%; */
 }
 
 .nav li {
@@ -41,7 +39,6 @@
   border-style: solid;
   border-color: #1e065e;
   color: #ffffff;
-  /* width: 80%; */
   text-align: center;
   font-size: 2vw;
   min-width: 10vw;
@@ -68,11 +65,3 @@ a:hover {
 a:active {
   background-color: red;
 }
-
-/* .link a:hover {
-  background-color: orange;
-}
-
-.link a:active {
-  background-color: red;
-} */

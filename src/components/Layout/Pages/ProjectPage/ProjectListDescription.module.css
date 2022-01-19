@@ -5,20 +5,9 @@
 
 .section {
   border-color: aqua;
-  /* position: relative; */
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  /* width: 1000px; */
-  /* padding: 0.2%; */
-  /* width: 1000px;
-  min-width: 0%;
-  max-width: 100%; */
-  /* display: inline-block; */
-  /* justify-content: space-evenly; */
-  /* min-width: 100%; */
-  /* width: 1000px; */
+  min-width: 60rem;
 }
 
 .inputs {
@@ -27,13 +16,10 @@
   border-color: #1e065e;
   border-style: solid;
   border-radius: 3px;
-  width: 30%;
+  width: clamp(20%, 1500px, 0%);
   height: 100%;
   color: white;
   font-size: 16px;
   padding-left: 1%;
   margin: 10px;
-  justify-self: start;
-
-  /* max-width: 350px; */
 }

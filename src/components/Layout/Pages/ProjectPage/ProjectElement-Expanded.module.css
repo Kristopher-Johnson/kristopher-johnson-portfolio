@@ -20,7 +20,6 @@
   position: relative;
   border-color: rgb(74, 108, 109);
   padding: 0.2%;
-  /* width: 1000px; */
   height: 100%;
   border-bottom: rgb(255, 255, 255);
   border-bottom: solid;
@@ -37,32 +36,24 @@
   position: absolute;
   top: -1rem;
   right: -0.2rem;
-  /* display: flex; */
-  /* top: -40%; */
-  /* right: -1%; */
-  /* top: -10; */
-  /* right: 10; */
   font-weight: bold;
   font-size: 40px;
   border-color: black;
-  /* border-style: dashed; */
 }
 
 .cardHeader h3 {
   margin: 0 0 0.5rem 0;
-  /* align-items: flex-start; */
   font-size: 300%;
 }
 
 .cardArticle {
   border-color: rgb(109, 181, 184);
   height: 90%;
-  /* width: 300px;
-  height: 100px; */
   overflow-y: scroll;
   scrollbar-color: rebeccapurple green;
   scrollbar-width: thin;
   display: flex;
+  justify-content: space-between;
 }
 
 .cardArticleWidth {
@@ -75,8 +66,6 @@
   text-align: left;
   list-style: none;
   border-color: rgb(74, 108, 109);
-  /* width: 100%; */
-  /* max-width: 50em; */
   height: auto;
 }
 .cardLanguages ul {
@@ -113,19 +102,12 @@ h4:active {
 }
 
 .cardDescription {
-  /* padding-top: 2%; */
   border-color: rgb(109, 181, 184);
   font-style: italic;
-  /* margin-bottom: 1rem; */
   text-align: left;
   font-size: 150%;
-  /* width: 60%; */
   max-width: 70em;
   height: auto;
-
-  /* white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; */
 }
 
 .cardDescription h4 {
@@ -136,26 +118,14 @@ h4:active {
 .cardImage {
   border-color: rgb(209, 3, 3);
   margin: 0;
-  /* outline: none; */
-  /* border: none; */
   padding: 0;
-  /* width: 10%; */
   height: 100%;
-  width: 50%;
-  /* max-width: 90%;
-  max-height: 7.5em;
-  min-width: 7.5em;
-  min-height: 7.5em; */
   display: flex;
-  /* margin-right: 3%; */
-  margin-left: 3%;
+  margin-right: 3%;
 }
 
 .cardImage img {
-  /* background-color: aliceblue; */
   width: 100%;
-
-  /* height: 100%; */
 }
 
 .cardArticle::-webkit-scrollbar {
