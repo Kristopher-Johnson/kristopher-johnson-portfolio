@@ -6,10 +6,10 @@ import { useState } from "react";
 
 const ProjectElement = (props) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  let languages = [];
+  let technologiess = [];
 
-  function languageListAlphabetical(arr) {
-    props.language.map((lang) => {
+  function technologiesListAlphabetical(arr) {
+    props.technologies.map((lang) => {
       if (!arr.includes(lang)) {
         arr.push(lang);
       }
@@ -19,7 +19,9 @@ const ProjectElement = (props) => {
     return arr.sort();
   }
 
-  const languageOptionArray = languageListAlphabetical(languages).map((a) => {
+  const technologiesOptionArray = technologiesListAlphabetical(
+    technologiess
+  ).map((a) => {
     return (
       <li key={a} value={a}>
         {a}
@@ -31,10 +33,10 @@ const ProjectElement = (props) => {
     return str.length > 340 ? str.substring(0, 340) + "..." : str;
   };
 
-  const truncateLanguages = (str) => {
-    const languageListLength = 5;
-    if (str.length > languageListLength) {
-      str = str.slice(0, languageListLength);
+  const truncateTechnologiess = (str) => {
+    const technologiesListLength = 5;
+    if (str.length > technologiesListLength) {
+      str = str.slice(0, technologiesListLength);
       str = str.map((a) => {
         let returnValue = { ...a };
         if (a === str[str.length - 1]) {
@@ -62,9 +64,9 @@ const ProjectElement = (props) => {
                 <h3>{props.name}</h3>
                 <h4>{truncateDescription(props.description)}</h4>
               </div>
-              <div className={classes.cardLanguages}>
+              <div className={classes.cardTechnologiess}>
                 <ul>
-                  <h4>{truncateLanguages(languageOptionArray)}</h4>
+                  <h4>{truncateTechnologiess(technologiesOptionArray)}</h4>
                 </ul>
               </div>
               <div className={classes.cardImage}>
@@ -96,11 +98,11 @@ const ProjectElement = (props) => {
             </header>
             <div className={styles.cardArticle}>
               <div className={styles.cardArticleWidth}>
-                <div className={styles.cardLanguages}>
+                <div className={styles.cardTechnologiess}>
                   <div>
-                    <h4>Languages Used</h4>
+                    <h4>Technologiess Used</h4>
                     <ul className={styles.container}>
-                      <h4>{languageOptionArray}</h4>
+                      <h4>{technologiesOptionArray}</h4>
                     </ul>
                   </div>
 

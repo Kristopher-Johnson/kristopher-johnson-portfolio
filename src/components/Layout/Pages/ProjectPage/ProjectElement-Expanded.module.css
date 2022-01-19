@@ -11,7 +11,7 @@
 .cardImage,
 .card,
 .cardArticle,
-.cardLanguages {
+.cardTechnologiess {
   /* border-style: solid; */
   /* min-height: 6vh; */
 }
@@ -60,7 +60,7 @@
   width: 60%;
 }
 
-.cardLanguages {
+.cardTechnologiess {
   display: flex;
   justify-content: space-between;
   text-align: left;
@@ -68,13 +68,13 @@
   border-color: rgb(74, 108, 109);
   height: auto;
 }
-.cardLanguages ul {
+.cardTechnologiess ul {
   columns: 3;
   -webkit-columns: 2;
   width: 100%;
 }
 
-.cardLanguages li {
+.cardTechnologiess li {
   list-style: inside;
   font-weight: normal;
 }

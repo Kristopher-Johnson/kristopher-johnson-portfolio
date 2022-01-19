@@ -2,7 +2,7 @@ const filter = (list, by) => {
   let projectList = [];
   let i = 0;
   while (i < list.length) {
-    if (list[i].props.language.includes(by)) {
+    if (list[i].props.technologies.includes(by)) {
       projectList.push(list[i]);
     }
     i++;
@@ -22,7 +22,7 @@ const search = (list, by) => {
       list[i].props.name.toLowerCase().includes(by) ||
       // list[i].props.description.toLowerCase().includes(by)
       // ||
-      list[i].props.language.find((element) => {
+      list[i].props.technologies.find((element) => {
         // console.log(element);
         return element.toLowerCase().includes(by);
       }) ||

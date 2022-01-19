@@ -14,7 +14,7 @@ const ProjectList = (props) => {
           id={project.id}
           name={project.name}
           description={project.description}
-          language={project.language}
+          technologies={project.technologies}
           tags={project.tags}
           image={project.image}
           github={project.github}

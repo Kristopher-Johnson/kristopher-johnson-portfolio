@@ -2,11 +2,11 @@ import classes from "./ProjectListDescription.module.css";
 import SearchBar from "../../../Function/SearchBar";
 
 const ProjectListDescription = (props) => {
-  let languages = [];
+  let technologiess = [];
 
-  function languageListAlphabetical(arr) {
+  function technologiesListAlphabetical(arr) {
     props.DUMMY_PROJECTS.map((project) => {
-      project.language.map((lang) => {
+      project.technologies.map((lang) => {
         if (!arr.includes(lang)) {
           arr.push(lang);
         }
@@ -17,7 +17,9 @@ const ProjectListDescription = (props) => {
     return arr.sort();
   }
 
-  const languageOptionArray = languageListAlphabetical(languages).map((a) => {
+  const technologiesOptionArray = technologiesListAlphabetical(
+    technologiess
+  ).map((a) => {
     return (
       <option key={a} value={a}>
         {a}
@@ -40,7 +42,7 @@ const ProjectListDescription = (props) => {
         onChange={(event) => props.onSort(event.target.value)}
       >
         <option>All</option>
-        {languageOptionArray}
+        {technologiesOptionArray}
       </select>
     </div>
   );
