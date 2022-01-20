@@ -1,17 +1,44 @@
+.center,
+.content {
+  border-style: dotted;
+}
+
+.outer {
+  position: relative;
+  border-color: aqua;
+  margin-top: 5%;
+  /* margin: 3rem; */
+  /* margin-top: 10%; */
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
 .content {
   color: white;
-  margin: 250px;
+  /* margin: 20%; */
   border-width: 1px;
   border-color: #1e065e;
   border-radius: 5px;
   border-style: solid;
   background-color: #727577;
+  /* width: 70%; */
+  /* min-height: 50vh; */
+
   width: 70%;
   min-height: 50vh;
+  border-color: aqua;
 }
 
-.center {
-  display: flex;
-  justify-content: center;
-  text-align: center;
+@media (max-width: 700px) {
+  .outer {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  .content {
+    width: 100%;
+    min-height: 50vh;
+    border-color: aqua;
+  }
 }

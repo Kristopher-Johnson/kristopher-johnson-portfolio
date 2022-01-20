@@ -3,20 +3,26 @@ import { Fragment } from "react";
 import HomePage from "./components/Layout/Pages/Homepage/HomePage";
 import Projects from "./components/Layout/Pages/ProjectPage/Projects";
 import About from "./components/Layout/Pages/AboutPage/About";
+import classes from "./App.css";
 
 import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Fragment>
-      <Header />
-      <Routes>
-        <Route path="/" exact element={<HomePage />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
+    <div>
+      <header className={classes.header}>
+        <Header />
+      </header>
+
+      <article className={classes.class}>
+        <Routes>
+          <Route path="/" exact element={<HomePage />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </article>
       {/* <Projects></Projects> */}
-    </Fragment>
+    </div>
   );
 }
 

@@ -3,11 +3,11 @@
   padding: 0;
 }
 .header {
-  position: fixed;
+  /* position: fixed;
   top: 0;
-  left: 0;
-  width: 100vw;
-  height: auto;
+  left: 0; */
+  width: 100%;
+  /* height: auto; */
   background-color: #3b3838;
   padding: 0 4%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
@@ -23,27 +23,40 @@
   font-family: "Lucida Handwriting";
   display: block;
   text-align: center;
-  font-size: 0.8vw;
+  /* font-size: 60%; */
+}
+
+.navSection {
+  /* width: 60%; */
 }
 
 .nav {
   display: flex;
   gap: 2%;
-  align-items: flex-end;
-  max-width: 60%;
+  /* align-items: flex-end; */
+  /* text-align: end; */
+  justify-content: end;
+  /* max-width: 60%; */
 }
 
 .nav li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   list-style-type: none;
   background-color: #727577;
   border-style: solid;
   border-color: #1e065e;
   color: #ffffff;
-  text-align: center;
-  font-size: 2vw;
+  /* height: 40px; */
+  height: 3rem;
+  /* font-size: 2vw; */
   min-width: 10vw;
   min-height: 3vh;
   transition: filter 300ms;
+  border-radius: 5px;
+  font-size: 150%;
 }
 
 .nav li,
@@ -64,4 +77,41 @@ a:hover {
 .nav li:active,
 a:active {
   background-color: red;
+}
+
+@media (max-width: 700px) {
+  .header {
+    display: block;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    /* align-items: center;
+    justify-content: center; */
+  }
+
+  .title {
+    margin-bottom: 1%;
+  }
+
+  .navSeaction {
+    /* width: 25%; */
+    width: 40%;
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  /* .navSeaction ul {
+    width: 100%;
+  } */
+  .nav {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .nav li {
+    width: 20vw;
+    height: 2.5rem;
+    font-size: 130%;
+  }
 }
