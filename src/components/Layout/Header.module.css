@@ -6,7 +6,7 @@
   /* position: fixed;
   top: 0;
   left: 0; */
-  width: 100%;
+  width: 100vw;
   /* height: auto; */
   background-color: #3b3838;
   padding: 0 4%;
@@ -31,7 +31,7 @@
   gap: 2%;
   /* align-items: flex-end; */
   /* text-align: end; */
-  justify-content: end;
+  /* justify-content: flex-end; */
   /* max-width: 60%; */
 }
 
@@ -48,11 +48,11 @@
   /* height: 40px; */
   height: 3rem;
   /* font-size: 2vw; */
-  min-width: 10vw;
+  min-width: 12vw;
   min-height: 3vh;
   transition: filter 300ms;
   border-radius: 5px;
-  font-size: 150%;
+  font-size: 200%;
 }
 
 .nav li,
@@ -75,6 +75,36 @@ a:active {
   background-color: red;
 }
 
+@media (min-width: 3000px) {
+  .title {
+    font-size: 150%;
+  }
+  .nav li {
+    font-size: 350%;
+    width: 280px;
+    height: 80px;
+  }
+}
+/* @media (max-width: 4000px) {
+  .title {
+    font-size: 200%;
+  }
+  .nav li {
+    font-size: 350%;
+    width: 300px;
+    height: 90px;
+  }
+}
+@media (max-width: 5000px) {
+  .title {
+    font-size: 200%;
+  }
+  .nav li {
+    font-size: 350%;
+    width: 300px;
+    height: 90px;
+  }
+} */
 @media (max-width: 700px) {
   .header {
     display: block;

@@ -3,10 +3,14 @@ import styles from "./ProjectElement-Expanded.module.css";
 import Card from "../../../UI/Card";
 import { useState } from "react";
 // import CardExpanded from "../../../UI/CardExpanded";
-
+import useWindowDimensions from "../../../Function/GetWindowDimensions";
+import truncateText, { truncateList } from "../../../Function/TruncateText";
 const ProjectElement = (props) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const { height, width } = useWindowDimensions();
   let technologiess = [];
+  console.log(height);
+  console.log(width);
 
   function technologiesListAlphabetical(arr) {
     props.technologies.map((lang) => {
@@ -30,26 +34,25 @@ const ProjectElement = (props) => {
   });
 
   const truncateDescription = (str) => {
-    return str.length > 340 ? str.substring(0, 340) + "..." : str;
+    if (width < 600) {
+      return truncateText(str, 80);
+    }
+    if (width < 800) {
+      return truncateText(str, 165);
+    }
+    if (width < 1000) {
+      return truncateText(str, 250);
+    }
+    if (width >= 1000) {
+      return truncateText(str, 340);
+    }
   };
 
-  const truncateTechnologiess = (str) => {
-    const technologiesListLength = 5;
-    if (str.length > technologiesListLength) {
-      str = str.slice(0, technologiesListLength);
-      str = str.map((a) => {
-        let returnValue = { ...a };
-        if (a === str[str.length - 1]) {
-          return (
-            <li key={a.key} value={a.value}>
-              {a.props.children}...
-            </li>
-          );
-        }
-        return returnValue;
-      });
+  const truncateTechnologies = (list) => {
+    if (width < 600) {
+      return truncateList(list, 3);
     }
-    return str;
+    return truncateList(list, 5);
   };
 
   console.log(isExpanded);
@@ -62,11 +65,13 @@ const ProjectElement = (props) => {
             <div className={classes.cardHeader}>
               <div className={classes.cardDescription}>
                 <h3>{props.name}</h3>
-                <h4>{truncateDescription(props.description)}</h4>
+                <h4 className={classes["truncate-overflow"]}>
+                  {truncateDescription(props.description, height)}
+                </h4>
               </div>
-              <div className={classes.cardTechnologiess}>
+              <div className={classes.cardTechnologies}>
                 <ul>
-                  <h4>{truncateTechnologiess(technologiesOptionArray)}</h4>
+                  <h4>{truncateTechnologies(technologiesOptionArray)}</h4>
                 </ul>
               </div>
               <div className={classes.cardImage}>

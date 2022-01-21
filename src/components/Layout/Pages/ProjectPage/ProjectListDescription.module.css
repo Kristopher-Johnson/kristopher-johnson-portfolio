@@ -1,13 +1,13 @@
 .section,
 .inputs {
-  /* border-style: dotted; */
+  border-style: dotted;
 }
 
 .section {
   border-color: aqua;
   display: flex;
   justify-content: space-between;
-  min-width: 60rem;
+  min-width: 1000px;
 }
 
 .inputs {
@@ -22,4 +22,34 @@
   font-size: 16px;
   padding-left: 1%;
   margin: 10px;
+}
+
+@media (max-width: 1500px) {
+  .section {
+    min-width: 1000px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .section {
+    min-width: 1000px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .section {
+    min-width: 800px;
+  }
+}
+
+@media (max-width: 800px) {
+  .section {
+    min-width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    min-width: 400px;
+  }
 }

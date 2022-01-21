@@ -12,15 +12,17 @@
 .card,
 .cardArticle,
 .cardTechnologiess {
-  /* border-style: solid; */
+  border-style: solid;
   /* min-height: 6vh; */
 }
 
 .outer {
   position: relative;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
   border-color: rgb(74, 108, 109);
   padding: 0.2%;
-  height: 100%;
   border-bottom: rgb(255, 255, 255);
   border-bottom: solid;
 }
@@ -29,7 +31,9 @@
   /* position: relative; */
   text-align: left;
   border-color: cadetblue;
-  height: 10%;
+  height: auto;
+  z-index: 100;
+  flex: 0 1 auto;
 }
 
 .cardHeader p {
@@ -54,6 +58,7 @@
   scrollbar-width: thin;
   display: flex;
   justify-content: space-between;
+  flex: 1 1 auto;
 }
 
 .cardArticleWidth {
@@ -144,4 +149,57 @@ h4:active {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #b30000;
+}
+
+@media (max-width: 1500px) {
+  .cardExpanded {
+    width: 1200px;
+    height: 40rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .cardExpanded {
+    width: 1000px;
+    height: 40rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .cardHeader h3 {
+    font-size: 200%;
+    /* height: auto; */
+  }
+  .cardTechnologiess h4 {
+    font-size: 80%;
+  }
+  .github {
+    font-size: 150%;
+  }
+  .cardDescription {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 800px) {
+  .cardHeader p {
+    /* top: -15%; */
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cardHeader h3 {
+    font-size: 150%;
+  }
+
+  .cardTechnologiess h4 {
+    font-size: 50%;
+  }
+
+  .cardHeader p {
+    top: -3%;
+    right: -0.1%;
+    font-size: 25px;
+  }
 }

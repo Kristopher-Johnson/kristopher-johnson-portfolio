@@ -65,15 +65,18 @@
 .cardDescription h4 {
   margin-left: 1rem;
   font-weight: normal;
+  white-space: pre-line;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.cardTechnologiess {
+.cardTechnologies {
   text-align: left;
   list-style: none;
   border-color: rgb(74, 108, 109);
 }
 
-.cardTechnologiess li {
+.cardTechnologies li {
   list-style: none;
   font-weight: normal;
 }
@@ -116,3 +119,29 @@
   overflow: hidden;
   text-overflow: ellipsis;
 } */
+@media (max-width: 1000px) {
+  .cardHeader p {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 800px) {
+  .cardTechnologies {
+    font-size: 90%;
+  }
+  .cardHeader p {
+    top: -15%;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cardTechnologies {
+    font-size: 90%;
+  }
+  .cardHeader p {
+    top: -10%;
+    right: -1.5%;
+    font-size: 25px;
+  }
+}
