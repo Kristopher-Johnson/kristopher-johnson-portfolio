@@ -6,8 +6,8 @@
 }
 
 @font-face {
-  font-family: "Title_Lucida_Handwriting";
-  src: url("../../assets/Fonts/lucida-handwriting/LHANDW.TTF") format("woff2");
+  font-family: "Title_Font";
+  src: url("../../assets/Fonts/Quantico/Quantico-Italic.ttf") format("woff2");
   font-style: normal;
   font-weight: normal;
 }
@@ -30,9 +30,10 @@
 
 .title {
   color: white;
-  font-family: "Title_Lucida_Handwriting";
+  font-family: "Title_Font";
   display: block;
   text-align: center;
+  line-height: 38px;
 }
 
 .nav {
