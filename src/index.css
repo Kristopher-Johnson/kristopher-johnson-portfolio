@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #898d91;
+  background: url("./assets/protruding-squares.svg");
 }
 
 code {

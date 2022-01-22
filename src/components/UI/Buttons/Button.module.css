@@ -1,0 +1,12 @@
+.nav {
+  /* color: white; */
+  width: 100%;
+}
+.nav:hover {
+  /* color: rgb(18, 88, 150); */
+}
+/* @media (max-width: 700px) {
+  .nav {
+    min-width: 25%;
+  }
+} */
