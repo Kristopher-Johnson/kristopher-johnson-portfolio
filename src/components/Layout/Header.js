@@ -86,7 +86,7 @@ const Header = (props) => {
         <nav className={classes.nav}>
           <Button to="/">Home</Button>
           <Button to="projects">Projects</Button>
-          <Button to="about">Contact</Button>
+          <Button to="contact">Contact</Button>
 
           <LoadingButton
             to="#"

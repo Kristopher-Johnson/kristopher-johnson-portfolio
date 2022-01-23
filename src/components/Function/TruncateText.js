@@ -4,7 +4,7 @@ const truncateText = (str, length) => {
 export default truncateText;
 
 export const truncateList = (str, length) => {
-  console.log("here");
+  // console.log("here");
   if (str.length > length) {
     str = str.slice(0, length);
     str = str.map((a) => {

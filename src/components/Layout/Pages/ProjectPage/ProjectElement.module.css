@@ -4,144 +4,138 @@
   margin: 0;
 }
 
-.outer,
-.cardHeader,
-.cardDescription,
-.project,
-.cardImage .card {
-  /* border-style: solid; */
-  /* min-height: 6vh; */
-}
-
 .outer {
-  position: relative;
-  border-color: rgb(74, 108, 109);
-  padding: 0.2%;
-  /* width: 1000px; */
-}
-
-.cardHeader {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  border-color: cadetblue;
-  border-bottom: rgb(255, 255, 255);
-  border-bottom: solid;
-  padding-bottom: 0.4%;
-  /* padding-right: 5%; */
-}
-
-.cardHeader p {
-  position: absolute;
-  /* display: flex; */
-  top: -20%;
-  right: -1%;
-  /* top: -10; */
-  /* right: 10; */
-  font-weight: bold;
-  font-size: 40px;
-  border-color: black;
-  /* border-style: dashed; */
-}
-
-.cardHeader h3 {
-  margin: 0 0 0.5rem 0;
-  align-items: flex-start;
+  border: 1px solid white;
+  padding: 20px;
+  padding-top: 3px;
+  border-radius: 0 0 20px 20px;
+  height: 185px;
 }
 
 .outer:hover {
   cursor: pointer;
 }
 
-.cardDescription {
-  border-color: rgb(109, 181, 184);
-  font-style: italic;
-  text-align: left;
-  width: 70%;
-  max-width: 50em;
-  height: 100%;
-}
-
-.cardDescription h4 {
-  margin-left: 1rem;
-  font-weight: normal;
-  white-space: pre-line;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.cardTechnologies {
-  text-align: left;
-  list-style: none;
-  border-color: rgb(74, 108, 109);
-}
-
-.cardTechnologies li {
-  list-style: none;
-  font-weight: normal;
-}
-
-.cardImage {
-  border-color: rgb(74, 108, 109);
-  margin: 0;
-  outline: none;
-  border: none;
-  padding: 0;
-  /* width: 10%; */
-  height: 100%;
-  max-width: 7.5em;
-  max-height: 7.5em;
-  min-width: 7.5em;
-  min-height: 7.5em;
+.card-header {
   display: flex;
-  margin-right: 3%;
+  border-bottom: 2px solid white;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
 }
-
-.cardImage img {
-  /* background-color: aliceblue; */
-  width: 100%;
-
-  /* height: 100%; */
+.card-header p {
+  display: flex;
+  align-self: flex-start;
+  font-size: 40px;
+  line-height: 0;
+  margin-top: 10px;
 }
-
-/* 
-.project {
+.card-main {
   display: flex;
   justify-content: space-between;
-  margin: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #ccc;
-  padding: 1rem;
-} */
+  /* align-items: center; */
+}
 
-/* .flexChild {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-} */
+.card-main section {
+  text-align: justify;
+  margin-right: 1%;
+}
+.card-main .card-list {
+  align-self: start;
+  padding-top: 10px;
+}
+.card-main li {
+  list-style: none;
+}
+
+.card-main img {
+  /* width: 100px; */
+  height: 130px;
+  max-width: 130px;
+  border-radius: 0 0 20px 0;
+}
+
+.card-description {
+  width: 73%;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding-right: 10px;
+}
+
 @media (max-width: 1000px) {
-  .cardHeader p {
+  .card-main {
+    gap: 10px;
+  }
+  .card-header p {
     font-size: 35px;
   }
 }
 
 @media (max-width: 800px) {
-  .cardTechnologies {
+  .outer {
+    padding: 12px;
+    padding-top: 3px;
+  }
+  .card-technologies {
     font-size: 90%;
   }
-  .cardHeader p {
+  .card-header p {
     top: -15%;
     font-size: 30px;
   }
 }
 
 @media (max-width: 600px) {
-  .cardTechnologies {
-    font-size: 90%;
+  .card-header {
+    font-size: 13px;
   }
-  .cardHeader p {
-    top: -10%;
-    right: -1.5%;
-    font-size: 25px;
+  .card-main {
+    display: grid;
+    grid-column: 2;
+    grid-row: 2;
+    gap: 5px;
+  }
+
+  .card-main .card-description {
+    font-size: 12px;
+    text-align: left;
+    display: flex;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    width: 100%;
+  }
+  .card-main .card-list {
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: start;
+    overflow-x: hidden;
+  }
+
+  .card-main img {
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+}
+@media (max-width: 400px) {
+  .card-header {
+    margin-bottom: 5px;
+  }
+  .card-header h1,
+  .card-header p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 350px) {
+  .github {
+    font-size: 9px;
+    margin-right: 10px;
   }
 }

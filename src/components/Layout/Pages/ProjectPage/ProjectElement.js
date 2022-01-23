@@ -9,8 +9,8 @@ const ProjectElement = (props) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const { height, width } = useWindowDimensions();
   let technologiess = [];
-  console.log(height);
-  console.log(width);
+  // console.log(height);
+  // console.log(width);
 
   function technologiesListAlphabetical(arr) {
     props.technologies.map((lang) => {
@@ -34,59 +34,83 @@ const ProjectElement = (props) => {
   });
 
   const truncateDescription = (str) => {
+    if (width < 350) {
+      return truncateText(str, 170);
+    }
+    if (width < 400) {
+      return truncateText(str, 220);
+    }
     if (width < 600) {
-      return truncateText(str, 80);
+      return truncateText(str, 300);
     }
     if (width < 800) {
-      return truncateText(str, 165);
+      return truncateText(str, 260);
     }
     if (width < 1000) {
-      return truncateText(str, 250);
+      return truncateText(str, 400);
     }
     if (width >= 1000) {
-      return truncateText(str, 340);
+      return truncateText(str, 550);
     }
   };
 
   const truncateTechnologies = (list) => {
+    // console.log("here");
     if (width < 600) {
-      return truncateList(list, 3);
+      let truncatedList;
+      if (width < 400) {
+        truncatedList = truncateList(list, 4);
+      } else {
+        truncatedList = truncateList(list, 5);
+      }
+      truncatedList = truncatedList.map((li) => {
+        if (li.key === truncatedList[truncatedList.length - 1].key) {
+          return (
+            <li key={li.key} value={li.value}>
+              {li.props.children}
+            </li>
+          );
+        }
+        return (
+          <li key={li.key} value={li.value}>
+            {li.props.children},
+          </li>
+        );
+      });
+
+      return truncatedList;
     }
     return truncateList(list, 5);
   };
 
-  console.log(isExpanded);
+  // console.log(isExpanded);
 
   if (!isExpanded) {
     return (
       <div onClick={() => setIsExpanded(!isExpanded)}>
         <Card isExpanded={isExpanded}>
           <div className={classes.outer}>
-            <div className={classes.cardHeader}>
-              <div className={classes.cardDescription}>
-                <h3>{props.name}</h3>
-                <h4 className={classes["truncate-overflow"]}>
-                  {truncateDescription(props.description, height)}
-                </h4>
-              </div>
-              <div className={classes.cardTechnologies}>
-                <ul>
-                  <h4>{truncateTechnologies(technologiesOptionArray)}</h4>
-                </ul>
-              </div>
-              <div className={classes.cardImage}>
-                <img
-                  src={props.image}
-                  alt=""
-                  onError={({ currentTarget }) => {
-                    currentTarget.onerror = null;
-                    currentTarget.src =
-                      "https://upload.wikimedia.org/wikipedia/commons/archive/a/ac/20070325222640%21No_image_available.svg";
-                  }}
-                />
-              </div>
+            <header className={classes["card-header"]}>
+              <h1>{props.name}</h1>
               <p>+</p>
-            </div>
+            </header>
+            <main className={classes["card-main"]}>
+              <section className={classes["card-description"]}>
+                {truncateDescription(props.description, height)}
+              </section>
+              <section className={classes["card-list"]}>
+                {truncateTechnologies(technologiesOptionArray)}
+              </section>
+              <img
+                src={props.image}
+                alt=""
+                onError={({ currentTarget }) => {
+                  currentTarget.onerror = null;
+                  currentTarget.src =
+                    "https://upload.wikimedia.org/wikipedia/commons/archive/a/ac/20070325222640%21No_image_available.svg";
+                }}
+              />
+            </main>
           </div>
         </Card>
       </div>
@@ -97,13 +121,13 @@ const ProjectElement = (props) => {
       <div onClick={() => setIsExpanded(!isExpanded)}>
         <Card isExpanded={isExpanded}>
           <div className={styles.outer}>
-            <header className={styles.cardHeader}>
+            <header className={styles["card-header"]}>
+              <h1>{props.name}</h1>
               <p>–</p>
-              <h3>{props.name}</h3>
             </header>
-            <div className={styles.cardArticle}>
-              <div className={styles.cardArticleWidth}>
-                <div className={styles.cardTechnologiess}>
+            <main className={styles["card-article"]}>
+              <div className={styles["card-description-width"]}>
+                <div className={styles["card-technologies"]}>
                   <div>
                     <h4>Technologiess Used</h4>
                     <ul className={styles.container}>
@@ -117,11 +141,11 @@ const ProjectElement = (props) => {
                     </a>
                   </div>
                 </div>
-                <div className={styles.cardDescription}>
+                <div className={styles["card-description"]}>
                   {props.description}
                 </div>
               </div>
-              <div className={styles.cardImage}>
+              <div className={styles["card-image"]}>
                 <img
                   src={props.image}
                   alt=""
@@ -132,7 +156,7 @@ const ProjectElement = (props) => {
                   }}
                 />
               </div>
-            </div>
+            </main>
           </div>
         </Card>
       </div>

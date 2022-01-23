@@ -1,0 +1,20 @@
+.outer {
+  display: grid;
+  justify-content: center;
+  margin: 200px 0;
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: xx-large;
+}
+
+.inner {
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

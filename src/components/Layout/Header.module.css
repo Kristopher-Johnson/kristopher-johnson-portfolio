@@ -5,9 +5,11 @@
   /* border: 1px solid rgb(41, 153, 7); */
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+
 @font-face {
   font-family: "Title_Font";
-  src: url("../../assets/Fonts/Quantico/Quantico-Italic.ttf") format("woff2");
+  src: url("../../assets/Fonts/Times_New_Roman/times.ttf") format("woff2");
   font-style: normal;
   font-weight: normal;
 }
@@ -30,7 +32,9 @@
 
 .title {
   color: white;
-  font-family: "Title_Font";
+  /* font-family: "Title_Font"; */
+  font-family: "Times New Roman", serif;
+  /* font-family: "Lora", serif; */
   display: block;
   text-align: center;
   line-height: 38px;
@@ -105,5 +109,13 @@
   }
   .icons {
     justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
   }
 }

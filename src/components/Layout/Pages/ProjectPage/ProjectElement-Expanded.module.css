@@ -2,138 +2,46 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-
-.outer,
-.cardHeader,
-.cardDescription,
-.project,
-.cardImage,
-.card,
-.cardArticle,
-.cardTechnologiess {
-  border-style: solid;
-  /* min-height: 6vh; */
+  /* border: 1px solid aqua; */
 }
 
 .outer {
-  position: relative;
+  border: 1px solid white;
+  padding: 0 1% 1.5% 1%;
+  border-radius: 0 0 20px 20px;
+  height: 780px;
+}
+
+.card-header {
   display: flex;
-  flex-flow: column;
-  height: 100%;
-  border-color: rgb(74, 108, 109);
-  padding: 0.2%;
-  border-bottom: rgb(255, 255, 255);
-  border-bottom: solid;
-}
-
-.cardHeader {
-  /* position: relative; */
-  text-align: left;
-  border-color: cadetblue;
-  height: auto;
-  z-index: 100;
-  flex: 0 1 auto;
-}
-
-.cardHeader p {
-  position: absolute;
-  top: -1rem;
-  right: -0.2rem;
-  font-weight: bold;
+  border-bottom: 2px solid white;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
   font-size: 40px;
-  border-color: black;
 }
 
-.cardHeader h3 {
-  margin: 0 0 0.5rem 0;
-  font-size: 300%;
+.card-header h1 {
+  padding-bottom: 5px;
 }
 
-.cardArticle {
-  border-color: rgb(109, 181, 184);
-  height: 90%;
+.card-header p {
+  align-self: flex-start;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 0;
+  margin: 30px 20px 0 0;
+}
+
+.card-article {
+  padding: 20px;
+  padding-right: 0;
+  height: 88%;
   overflow-y: scroll;
-  scrollbar-color: rebeccapurple green;
-  scrollbar-width: thin;
   display: flex;
   justify-content: space-between;
-  flex: 1 1 auto;
 }
-
-.cardArticleWidth {
-  width: 60%;
-}
-
-.cardTechnologiess {
-  display: flex;
-  justify-content: space-between;
-  text-align: left;
-  list-style: none;
-  border-color: rgb(74, 108, 109);
-  height: auto;
-}
-.cardTechnologiess ul {
-  columns: 3;
-  -webkit-columns: 2;
-  width: 100%;
-}
-
-.cardTechnologiess li {
-  list-style: inside;
-  font-weight: normal;
-}
-
-.github {
-  margin: 5%;
-  margin-right: 10%;
-
-  font-size: 200%;
-
-  text-decoration: underline;
-}
-
-.github a:hover {
-  color: #c0c0c0;
-}
-.github li:active,
-a:active {
-  background-color: none;
-}
-
-.github a:active,
-h4:active {
-  background-color: none;
-}
-
-.cardDescription {
-  border-color: rgb(109, 181, 184);
-  font-style: italic;
-  text-align: left;
-  font-size: 150%;
-  max-width: 70em;
-  height: auto;
-}
-
-.cardDescription h4 {
-  margin-left: 1rem;
-  font-weight: normal;
-}
-
-.cardImage {
-  border-color: rgb(209, 3, 3);
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  display: flex;
-  margin-right: 3%;
-}
-
-.cardImage img {
-  width: 100%;
-}
-
-.cardArticle::-webkit-scrollbar {
+.card-article::-webkit-scrollbar {
   width: 20px;
 }
 
@@ -151,46 +59,148 @@ h4:active {
   background: #b30000;
 }
 
+.card-technologies {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  margin-left: 30px;
+
+  /* margin-top: 10px; */
+}
+.card-technologies ul {
+  columns: 3;
+  -webkit-columns: 3;
+}
+
+.card-technologies li {
+  list-style: inside;
+  font-weight: normal;
+}
+
+.card-description-width {
+  width: 60%;
+}
+
+.github {
+  align-self: center;
+  /* margin: 3% 0 0 5%; */
+  margin-right: 10%;
+
+  font-size: 140%;
+}
+
+.github a {
+  color: white;
+}
+
+.github a:hover {
+  color: #c0c0c0;
+}
+.github li:active,
+a:active {
+  background-color: none;
+}
+
+.github a:active,
+h4:active {
+  background-color: none;
+}
+
+.card-description {
+  text-align: left;
+  font-size: 150%;
+  padding-top: 10px;
+}
+
+.card-description h4 {
+  margin-left: 1rem;
+  font-weight: normal;
+}
+
+.card-image {
+  display: flex;
+  margin-right: 1%;
+  max-width: 35%;
+}
+
+.card-image img {
+  width: 100%;
+}
+
 @media (max-width: 1500px) {
-  .cardExpanded {
-    width: 1200px;
-    height: 40rem;
+  .outer {
+    padding-bottom: 4%;
+    height: 620px;
   }
 }
 
 @media (max-width: 1200px) {
-  .cardExpanded {
-    width: 1000px;
-    height: 40rem;
+  .card-header h1,
+  .card-header p {
+    font-size: 35px;
+  }
+  .card-header p {
+    margin: 20px 20px 0 0;
   }
 }
 
 @media (max-width: 1000px) {
-  .cardHeader h3 {
-    font-size: 200%;
-    /* height: auto; */
+  .outer {
+    height: 460px;
   }
-  .cardTechnologiess h4 {
-    font-size: 80%;
+  .card-header {
+    margin-bottom: 10px;
+  }
+  .card-article {
+    padding-top: 5px;
+  }
+  .card-technologies {
+    font-size: 90%;
+  }
+  .card-technologies ul {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 85%;
   }
   .github {
-    font-size: 150%;
+    font-size: 100%;
   }
-  .cardDescription {
-    font-size: 80%;
+  .card-description {
+    font-size: 95%;
+    padding-top: 0;
+  }
+  .card-article::-webkit-scrollbar {
+    width: 13px;
   }
 }
 
 @media (max-width: 800px) {
-  .cardHeader p {
-    /* top: -15%; */
-    font-size: 30px;
+  .outer {
+    height: 300px;
+    padding-bottom: 5%;
+  }
+  .card-header h1 {
+    font-size: 25px;
+  }
+  .card-article {
+    padding-bottom: 0;
+    padding-left: 10px;
+  }
+  .card-description-width {
+    width: 65%;
+  }
+  .card-technologies {
+    margin-left: 20px;
   }
 }
 
 @media (max-width: 600px) {
-  .cardHeader h3 {
-    font-size: 150%;
+  .card-header h1,
+  .card-header p {
+    font-size: 20px;
+  }
+  .card-header p {
+    margin: 10px 10px 0 0;
   }
 
   .cardTechnologiess h4 {
@@ -201,5 +211,67 @@ h4:active {
     top: -3%;
     right: -0.1%;
     font-size: 25px;
+  }
+  .card-technologies {
+    margin-left: 10px;
+    font-size: 12px;
+  }
+  .card-technologies ul {
+    columns: 2;
+    -webkit-columns: 2;
+  }
+  .github {
+    font-size: 12px;
+  }
+  .card-description {
+    font-size: 13px;
+  }
+  .card-article::-webkit-scrollbar {
+    width: 8px;
+  }
+  .card-image img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 400px) {
+  .outer {
+    height: 235px;
+    padding-bottom: 6%;
+  }
+  .card-header {
+    margin-bottom: 0;
+  }
+  .card-header h1,
+  .card-header p {
+    font-size: 18px;
+  }
+  .card-technologies {
+    margin-left: 5px;
+    margin-bottom: 0;
+    font-size: 10px;
+  }
+  .card-technologies ul {
+    margin-bottom: 2px;
+  }
+
+  .github {
+    font-size: 10px;
+    margin-right: 35px;
+  }
+  .card-description {
+    font-size: 11px;
+  }
+  .card-image img {
+    height: 180px;
+  }
+}
+@media (max-width: 350px) {
+  .github {
+    font-size: 9px;
+    margin-right: 10px;
+  }
+  .card-image img {
+    height: 150px;
   }
 }

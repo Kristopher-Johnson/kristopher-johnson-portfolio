@@ -1,0 +1,17 @@
+.margin {
+  margin: 200px;
+  /* width: 100%; */
+}
+
+.rainbow-text {
+  font-size: 40px;
+  background: linear-gradient(
+    271deg,
+    #a0e9ff 30%,
+    #a162e8 50%,
+    #f093b0 70%,
+    #edca85 94%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

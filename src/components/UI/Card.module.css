@@ -11,20 +11,21 @@
   color: white;
   margin-bottom: 30px;
   border-width: 2px;
-  border-color: #1e065e;
-  border-style: solid;
-  background-color: #727577;
-  padding: 2%;
+  border-top: 3px solid white;
+  border-radius: 0 0 20px 20px;
+  background-color: #5c5b5b;
+  padding: 8px;
+  box-shadow: 8px 12px rgba(0, 0, 0, 0.192);
 }
 
 .card {
   width: 1000px;
-  height: 175px;
+  height: 205px;
   display: inline-block;
 }
 
 .cardExpanded {
-  width: clamp(100%, 1000px, 0%);
+  /* width: clamp(100%, 1000px, 0%); */
   width: 1500px;
   height: 50rem;
   display: inline-block;
@@ -85,6 +86,24 @@
   }
   .cardExpanded {
     width: 400px;
-    height: 20rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .card {
+    width: 350px;
+  }
+  .cardExpanded {
+    width: 350px;
+    height: 16rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .card {
+    width: 300px;
+  }
+  .cardExpanded {
+    width: 300px;
   }
 }

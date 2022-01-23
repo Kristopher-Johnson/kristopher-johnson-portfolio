@@ -2,7 +2,7 @@ import Header from "./components/Layout/Header";
 // import { Fragment } from "react";
 import HomePage from "./components/Layout/Pages/Homepage/HomePage";
 import Projects from "./components/Layout/Pages/ProjectPage/Projects";
-import About from "./components/Layout/Pages/AboutPage/About";
+import Contact from "./components/Layout/Pages/ContactPage/Contact";
 import classes from "./App.css";
 
 import { Routes, Route } from "react-router-dom";
@@ -18,7 +18,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<HomePage />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </article>
       {/* <Projects></Projects> */}
