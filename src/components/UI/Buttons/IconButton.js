@@ -9,8 +9,8 @@ const IconButton = (props) => {
       <MUI.Tooltip title={props.toolTip}>
         <MUI.IconButton
           onClick={props.onClick}
-          color="outlinedButton"
-          size="large"
+          color={props.color ? props.color : "outlinedButton"}
+          size={props.size ? props.size : "large"}
           className={classes.nav}
           aria-label={props.ariaLabel}
         >

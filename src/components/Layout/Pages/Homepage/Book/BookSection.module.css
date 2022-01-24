@@ -1,7 +1,7 @@
 .outer {
   display: grid;
   justify-content: center;
-  margin: 200px 0;
+  /* margin: 200px 0; */
   width: 100%;
   height: auto;
 }
@@ -12,7 +12,7 @@
 }
 
 .inner {
-  width: 1200px;
+  max-width: 1200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

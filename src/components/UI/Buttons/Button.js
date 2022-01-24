@@ -8,18 +8,20 @@ const Button = (props) => {
     <MUI.ThemeProvider theme={theme}>
       <MUI.Button
         onClick={props.onClick}
-        color="outlinedButton"
-        variant="outlined"
-        size="large"
+        color={props.color ? props.color : "mainButton"}
+        variant={props.variant ? props.variant : "contained"}
+        size={props.size ? props.size : "large"}
+        type={props.type}
         startIcon={props.startIcon}
         endIcon={props.endIcon}
         className={classes.nav}
+
         // className=
       >
         {props.children}
       </MUI.Button>
     </MUI.ThemeProvider>
   );
-  return <Link to={props.to}>{button}</Link>;
+  return button;
 };
 export default Button;

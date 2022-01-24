@@ -26,3 +26,24 @@
   /* margin-right: 100px; */
   border-radius: 50% 0 50% 0;
 }
+@media (max-width: 1400px) {
+  .content-first {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .profile-img {
+    width: 350px;
+    height: 455px;
+  }
+}
+
+@media (max-width: 400px) {
+  .profile-img {
+    width: 245px;
+    height: 318.5px;
+  }
+}

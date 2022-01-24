@@ -1,7 +1,10 @@
 import { useState } from "react";
+import Button from "../../../UI/Buttons/Button";
+import classes from "./ContactForm.module.css";
 
 const ContactForm = () => {
   const [status, setStatus] = useState("Submit");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("Sending...");
@@ -23,20 +26,25 @@ const ContactForm = () => {
     alert(result.status);
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
+    <form onSubmit={handleSubmit} className={classes.form}>
+      <header></header>
+      <div className={classes.name}>
         <label htmlFor="name">Name:</label>
         <input type="text" id="name" required />
       </div>
-      <div>
+      <div className={classes.email}>
         <label htmlFor="email">Email:</label>
         <input type="email" id="email" required />
       </div>
-      <div>
+      <div className={classes.message}>
         <label htmlFor="message">Message:</label>
         <textarea id="message" required />
       </div>
-      <button type="submit">{status}</button>
+      <div className={classes.button}>
+        <Button type="submit" variant="outlined" color="outlinedButton">
+          {status}
+        </Button>
+      </div>
     </form>
   );
 };

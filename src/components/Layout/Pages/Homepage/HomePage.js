@@ -10,32 +10,25 @@ const HomePage = (props) => {
   return (
     <div className={classes.outer}>
       <div className={classes.content}>
-        <section id="section01" className={classes.scroll}>
+        <section className={classes.section}>
           <PersonalBio />
-          {/* <a className={classes.link} href="#section02">
-            <span></span>Scroll
-          </a> */}
         </section>
 
-        <section id="section02" className={classes.scroll}>
+        <section className={classes.section}>
           <Technologies />
-          {/* <a className={classes.link} href="#section03">
-            <span></span>Scroll
-          </a> */}
         </section>
 
-        <section id="section03" className={classes.scroll}>
+        <section className={classes.section}>
           <BookSection />
-          {/* <a className={classes.link} href="#section04">
-            <span></span>Scroll
-          </a> */}
         </section>
 
         {/* <section>
           <BlogSection />
         </section> */}
 
-        <Footer />
+        <section className={classes.section}>
+          <Footer />
+        </section>
       </div>
     </div>
   );

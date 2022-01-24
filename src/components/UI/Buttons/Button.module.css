@@ -1,7 +1,13 @@
+* {
+  /* text-decoration: none; */
+}
 .nav {
-  /* color: white; */
+  color: white;
   width: 100%;
 }
+/* .nav * {
+  text-decoration: none;
+} */
 .nav:hover {
   /* color: rgb(18, 88, 150); */
 }

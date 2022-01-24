@@ -1,9 +1,16 @@
 .margin {
-  margin: 200px;
-  /* width: 100%; */
+  /* margin: 200px; */
+  /* max-width: 1200px; */
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .rainbow-text {
+  max-width: 1200px;
   font-size: 40px;
   background: linear-gradient(
     271deg,
@@ -14,4 +21,28 @@
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 1200px) {
+  .rainbow-text {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .rainbow-text {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  .rainbow-text {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 500px) {
+  .rainbow-text {
+    font-size: 22px;
+  }
 }

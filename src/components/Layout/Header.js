@@ -84,9 +84,21 @@ const Header = (props) => {
         </Link>
 
         <nav className={classes.nav}>
-          <Button to="/">Home</Button>
-          <Button to="projects">Projects</Button>
-          <Button to="contact">Contact</Button>
+          <Link to="/">
+            <Button variant="outlined" color="outlinedButton">
+              Home
+            </Button>
+          </Link>
+          <Link to="projects">
+            <Button variant="outlined" color="outlinedButton">
+              Projects
+            </Button>
+          </Link>
+          <Link to="contact">
+            <Button variant="outlined" color="outlinedButton">
+              Contact
+            </Button>
+          </Link>
 
           <LoadingButton
             to="#"
