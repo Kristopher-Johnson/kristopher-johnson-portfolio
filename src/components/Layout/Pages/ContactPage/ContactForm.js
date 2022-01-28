@@ -14,19 +14,27 @@ const ContactForm = () => {
       email: email.value,
       message: message.value,
     };
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(details),
-    });
+    let response = await fetch(
+      "https://kris-portfolio-nodejs.herokuapp.com/contact",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+        },
+        body: JSON.stringify(details),
+      }
+    );
     setStatus("Submit");
+    var form = document.getElementById("myForm");
+    form.reset();
     let result = await response.json();
+
     alert(result.status);
+
+    console.log(form);
   };
   return (
-    <form onSubmit={handleSubmit} className={classes.form}>
+    <form id="myForm" onSubmit={handleSubmit} className={classes.form}>
       <header></header>
       <div className={classes.name}>
         <label htmlFor="name">Name:</label>
