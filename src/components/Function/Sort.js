@@ -14,6 +14,7 @@ const filter = (list, by) => {
 const search = (list, by) => {
   let projectList = [];
   let i = 0;
+
   while (i < list.length) {
     // console.log(by);
     // console.log(list[i]);

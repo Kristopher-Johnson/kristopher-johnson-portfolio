@@ -1,6 +1,7 @@
 import classes from "./TechnologyItem.module.css";
 import Button from "../../../../UI/Buttons/Button";
 import { Fragment } from "react";
+import { Link } from "react-router-dom";
 const TechnologyItem = (props) => {
   function svgMap() {
     const slicedArray = props.icon.slice(0, 3);
@@ -30,14 +31,21 @@ const TechnologyItem = (props) => {
     <section className={classes.outer}>
       <div className={classes.inner}>
         <header className={classes.header}>
-          <h1 className={classes.title}>{props.name}</h1>
+          <div>
+            <h1 className={classes.title}>{props.name}</h1>
+            <h1 className={classes.title}>
+              {props.skill ? props.skill : "..."}/10
+            </h1>
+          </div>
           <div>{svgMap()}</div>
         </header>
         <main className={classes.body}>{props.description}</main>
         <div className={classes.center}>
-          <Button className={classes.button} to="projects">
-            Projects
-          </Button>
+          <Link to="projects">
+            <Button className={classes.button} to="projects">
+              Projects
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

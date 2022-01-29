@@ -1,6 +1,7 @@
-import { Fragment } from "react";
+import { Fragment, useState, useEffect } from "react";
 import BookItem from "./BookItem";
 import classes from "./BookSection.module.css";
+import database from "../../../../../databaseConfig";
 
 const DUMMY_BOOKS = [
   {
@@ -22,11 +23,28 @@ const DUMMY_BOOKS = [
     cover: "https://images-na.ssl-images-amazon.com/images/I/41HXiIojloL.jpg",
   },
 ];
-const BookSection = () => {
+const BookSection = (props) => {
+  const [BOOK_DATA, setBOOK_DATA] = useState([]);
+  useEffect(() => {
+    const ref = database.ref("2/value");
+    const listener = ref.on("value", (snapshot) => {
+      const fetchedBooks = [];
+      snapshot.forEach((childSnapshot) => {
+        const key = childSnapshot.key;
+        const data = childSnapshot.val();
+        fetchedBooks.push({ id: key, ...data });
+      });
+      setBOOK_DATA(fetchedBooks);
+    });
+    return () => ref.off("value", listener);
+  }, [props]);
+
+  // console.log(BOOK_DATA);
+
   const BookList = () => {
     return (
       <Fragment>
-        {DUMMY_BOOKS.map((item) => (
+        {BOOK_DATA.map((item) => (
           <BookItem
             key={item.id}
             id={item.id}

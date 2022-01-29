@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* border: 1px solid aqua; */
 }
 
 .outer,
@@ -69,6 +70,10 @@
   display: flex;
   justify-content: center;
   /* width: 100%; */
+}
+
+.center a {
+  width: 100%;
 }
 
 .button {
