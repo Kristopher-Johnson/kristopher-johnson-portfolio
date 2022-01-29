@@ -27,17 +27,6 @@ const Projects = (props) => {
 
   // console.log(PROJECT_DATA);
 
-  // let projects = [];
-  // database.ref("0/value").on("value", function (snapshot) {
-  //   projects = snapshot.val();
-  // });
-  // useEffect(() => {
-  //   localStorage.setItem("projects", JSON.stringify(projects));
-  // });
-
-  // function jsonProjects() {
-  //   return JSON.parse(localStorage.getItem("projects"));
-  // }
   const sortList = (language) => {
     setListFilter(language);
     setThisFilter(true);

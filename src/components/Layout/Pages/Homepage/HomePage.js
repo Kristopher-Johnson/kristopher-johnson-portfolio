@@ -1,4 +1,3 @@
-import Article from "./Bio/Article";
 import classes from "./HomePage.module.css";
 import Technologies from "./Technologies/Technologies";
 import PersonalBio from "./Bio/PersonalBio";
@@ -22,9 +21,9 @@ const HomePage = (props) => {
           <BookSection />
         </section>
 
-        {/* <section>
+        <section>
           <BlogSection />
-        </section> */}
+        </section>
 
         <section className={classes.section}>
           <Footer />

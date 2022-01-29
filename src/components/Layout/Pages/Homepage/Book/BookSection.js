@@ -3,26 +3,6 @@ import BookItem from "./BookItem";
 import classes from "./BookSection.module.css";
 import database from "../../../../../databaseConfig";
 
-const DUMMY_BOOKS = [
-  {
-    id: "b1",
-    title: "The Complete Software Developer's Career Guide",
-    author: "John Sonmez",
-    cover: "https://images-na.ssl-images-amazon.com/images/I/71Tg5bFZrqL.jpg",
-  },
-  {
-    id: "b2",
-    title: "Grokking Artificial Intelligence Algorithms",
-    author: "Rishal Hurbans",
-    cover: "https://images-na.ssl-images-amazon.com/images/I/81g6X3dWlhL.jpg",
-  },
-  {
-    id: "b3",
-    title: "The Pragmatic Programmer",
-    author: "Andy Hunt and Dave Thomas",
-    cover: "https://images-na.ssl-images-amazon.com/images/I/41HXiIojloL.jpg",
-  },
-];
 const BookSection = (props) => {
   const [BOOK_DATA, setBOOK_DATA] = useState([]);
   useEffect(() => {
