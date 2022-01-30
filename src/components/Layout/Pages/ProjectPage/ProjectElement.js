@@ -5,6 +5,8 @@ import { useState } from "react";
 // import CardExpanded from "../../../UI/CardExpanded";
 import useWindowDimensions from "../../../Function/GetWindowDimensions";
 import truncateText, { truncateList } from "../../../Function/TruncateText";
+import Carousel from "react-material-ui-carousel";
+
 const ProjectElement = (props) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const { height, width } = useWindowDimensions();
@@ -83,7 +85,24 @@ const ProjectElement = (props) => {
     return truncateList(list, 5);
   };
 
-  // console.log(isExpanded);
+  // console.log(technologiesOptionArray);
+
+  function Item(props) {
+    console.log(props.item);
+    return (
+      <img
+        key={props.item}
+        src={props.item}
+        alt=""
+        // onError={({ currentTarget }) => {
+        //   currentTarget.onerror = null;
+        //   currentTarget.src =
+        //     "https://upload.wikimedia.org/wikipedia/commons/archive/a/ac/20070325222640%21No_image_available.svg";
+        // }}
+      />
+    );
+  }
+  // console.log(props.image);
 
   if (!isExpanded) {
     return (
@@ -96,13 +115,17 @@ const ProjectElement = (props) => {
             </header>
             <main className={classes["card-main"]}>
               <section className={classes["card-description"]}>
-                {truncateDescription(props.description, height)}
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: props.description,
+                  }}
+                ></div>
               </section>
               <section className={classes["card-list"]}>
                 {truncateTechnologies(technologiesOptionArray)}
               </section>
               <img
-                src={props.image}
+                src={props.image[0]}
                 alt=""
                 onError={({ currentTarget }) => {
                   currentTarget.onerror = null;
@@ -142,20 +165,19 @@ const ProjectElement = (props) => {
                   </div>
                 </div>
                 <div className={styles["card-description"]}>
-                  {props.description}
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: props.description,
+                    }}
+                  ></div>
                 </div>
               </div>
-              <div className={styles["card-image"]}>
-                <img
-                  src={props.image}
-                  alt=""
-                  onError={({ currentTarget }) => {
-                    currentTarget.onerror = null;
-                    currentTarget.src =
-                      "https://upload.wikimedia.org/wikipedia/commons/archive/a/ac/20070325222640%21No_image_available.svg";
-                  }}
-                />
-              </div>
+
+              <Carousel className={styles["card-image"]}>
+                {props.image.map((item) => (
+                  <Item key={item} item={item} />
+                ))}
+              </Carousel>
             </main>
           </div>
         </Card>

@@ -4,7 +4,7 @@ const Article = (props) => {
   const content = () => {
     if (props.imagePos === "left") {
       return (
-        <div className={classes["content-first"]}>
+        <div className={classes.content}>
           <img
             src={props.imgSrc}
             alt=""
@@ -15,14 +15,14 @@ const Article = (props) => {
             }}
             className={classes["profile-img"]}
           />
-          <article>{props.children}</article>
+          <article className={classes.article}>{props.children}</article>
         </div>
       );
     }
     if (props.imagePos === "right") {
       return (
-        <div className={classes["content-first"]}>
-          <article>{props.children}</article>
+        <div className={classes.content}>
+          <article className={classes.article}>{props.children}</article>
           <img
             src={props.imgSrc}
             alt=""

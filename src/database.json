@@ -4,21 +4,39 @@
     "value": [
       {
         "id": "p1",
-        "name": "Student Mark Calculator",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam libero est molestias inventore cupiditate maxime praesentium nisi! Quo pariatur, possimus asperiores repellat voluptatibus distinctio adipisci explicabo. Ipsa explicabo modi soluta, dolorum, sapiente sunt iusto libero, et pariatur temporibus iste voluptatum. Sapiente possimus, atque cumque ullam eum pariatur voluptatem suscipit sed nam autem molestiae, quaerat asperiores quidem. Consequuntur minus ratione dolore necessitatibus, illo soluta sit, dolor ea error commodi eligendi eveniet odio mollitia inventore doloremque rem accusantium temporibus modi asperiores, magni numquam perspiciatis laboriosam exercitationem! Quas itaque doloremque excepturi optio sit libero dignissimos illum cupiditate velit quod veritatis voluptates, beatae, laborum architecto placeat totam blanditiis delectus corporis explicabo culpa. Reprehenderit tempore doloremque consectetur eius. Accusantium facere dignissimos praesentium numquam pariatur ipsum voluptate error corrupti harum incidunt cumque dicta sequi optio vitae tempore hic, ullam nam? Dolore, blanditiis quisquam ea reprehenderit consectetur fuga rem, exercitationem beatae delectus commodi temporibus soluta, esse explicabo voluptatibus maxime ut quia. Labore voluptatibus pariatur cum provident vitae vero! Officiis laborum inventore sunt. Blanditiis ipsam quos nostrum officia, fugiat necessitatibus iste vitae. Non accusantium quaerat sapiente iste nesciunt obcaecati distinctio, corporis omnis? Quam reiciendis, tenetur minima natus id voluptate laboriosam ipsa fuga, maxime molestias, mollitia porro facilis ipsum.",
+        "name": "Personal Portfolio",
+        "description": "<h1>My personal portfolio is a project that I created to demonstrate who I am and some of the projects and technologies that I have used throughout my time as a software engineer.<h1/><h1>You obviously know this as you have found this site and are reading this project description. With that said feel free to look around and view the source code for this project.</h1></br><h1>This project primarily uses ReactJs for most of its components this has allowed me dynamically add elements such as those in this project list based on those stored in my database.</h1><h1>The database im using is a realtime relation database stored on firebase (the same platform that my main app is stored on).</h1><h1>Node.js is also used as a backend server for the contact form.</h1>",
         "technologies": [
           "HTML",
           "CSS",
           "JavaScript",
-          "C",
-          "Ruby",
-          "C++",
-          "C",
-          "test"
+          "React",
+          "Node.js",
+          "Firebase"
         ],
-        "tags": ["HTML", "CSS", "JavaScript", "C", "Ruby", "C++", "C", "tag"],
-        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Bob_bates_2015_gdc_%28cropped%29_%28cropped%29.jpg",
-        "github": "https://github.com/Kristopher-Johnson/kristopher-johnson-portfolio/tree/master"
+        "tags": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "React",
+          "Node.js",
+          "Firebase",
+          "Heroku",
+          "Porfolio",
+          "Web App",
+          "Web Development",
+          "Website",
+          "UX UI",
+          "Front end",
+          "Back end"
+        ],
+        "image": [
+          "https://firebasestorage.googleapis.com/v0/b/kristopher-johnson-portfolio.appspot.com/o/Project%20Images%2FPortfolioProject%2Fportfolio%20image.PNG?alt=media&token=930f5edd-e6a0-461f-8e71-7433fda224f8",
+          "https://firebasestorage.googleapis.com/v0/b/kristopher-johnson-portfolio.appspot.com/o/Project%20Images%2FPortfolioProject%2Fportfoliohomebottom.PNG?alt=media&token=3bb30728-1973-47dd-9654-be08e03e9c70",
+          "https://firebasestorage.googleapis.com/v0/b/kristopher-johnson-portfolio.appspot.com/o/Project%20Images%2FPortfolioProject%2Fportfolioprojectsimage.PNG?alt=media&token=83b2ced5-7c36-4c79-a6d0-ca2ae7cbed13",
+          "https://firebasestorage.googleapis.com/v0/b/kristopher-johnson-portfolio.appspot.com/o/Project%20Images%2FPortfolioProject%2Fportfoliocontact%20image.PNG?alt=media&token=a8f795a3-9b11-4c29-bb0f-669c7cc48720"
+        ],
+        "github": "https://github.com/Kristopher-Johnson/kristopher-johnson-portfolio/tree/main"
       },
       {
         "id": "p2",
@@ -26,7 +44,9 @@
         "description": "Hotel Managment System",
         "technologies": ["Java"],
         "tags": [""],
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Catedral_de_San_Juan%2C_Breslavia%2C_Polonia%2C_2017-12-20%2C_DD_09-11_HDR.jpg/2880px-Catedral_de_San_Juan%2C_Breslavia%2C_Polonia%2C_2017-12-20%2C_DD_09-11_HDR.jpg",
+        "image": [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Catedral_de_San_Juan%2C_Breslavia%2C_Polonia%2C_2017-12-20%2C_DD_09-11_HDR.jpg/2880px-Catedral_de_San_Juan%2C_Breslavia%2C_Polonia%2C_2017-12-20%2C_DD_09-11_HDR.jpg"
+        ],
         "github": "https://github.com/Kristopher-Johnson/kristopher-johnson-portfolio/tree/master"
       },
       {
@@ -35,7 +55,7 @@
         "description": "This",
         "technologies": ["Java", "Junit"],
         "tags": [""],
-        "image": "",
+        "image": [""],
         "github": "https://github.com/Kristopher-Johnson/kristopher-johnson-portfolio/tree/master"
       },
       {

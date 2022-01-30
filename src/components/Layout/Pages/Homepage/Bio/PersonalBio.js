@@ -1,13 +1,23 @@
 import Article from "./Article";
+import portrait from "../../../../../assets/portrait.jpg";
 const PersonalBio = () => {
   return (
-    <Article
-      imagePos="left"
-      imgSrc="https://upload.wikimedia.org/wikipedia/commons/8/8c/Bob_bates_2015_gdc_%28cropped%29_%28cropped%29.jpg"
-    >
-      <h1>Hi Im Kris, an aspiring software engineer.</h1>
-
-      {/* <h2>I agrraduated from Ne</h2> */}
+    <Article imagePos="left" imgSrc={portrait}>
+      <h1>Kristopher Johnson</h1>
+      <h3>Software Engineer</h3>
+      <br />
+      <h2>Hey im Kris, an aspiring software engineer from Yorkshire, UK.</h2>
+      <br />
+      <h2>
+        I graduated from Newcastle University with a degree in computer science,
+        I love working on all kind of programming projects from web development
+        to mobile application.
+      </h2>
+      <br />
+      <h2>
+        I primarily use Java, JavaScrript and React but have knowledge in a
+        multitude of languages including C, C++, PHP, SQL, ASM
+      </h2>
     </Article>
   );
 };
