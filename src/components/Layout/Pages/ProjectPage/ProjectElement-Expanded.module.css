@@ -81,10 +81,7 @@
 .card-description-width {
   width: 60%;
 }
-.card-description h1,
-.card-description h2,
-.card-description h3,
-.card-description h4 {
+.card-description * {
   margin-top: 10px;
   font-size: 26px;
 }
@@ -168,10 +165,7 @@ h4:active {
   .card-header p {
     margin: 20px 20px 0 0;
   }
-  .card-description h1,
-  .card-description h2,
-  .card-description h3,
-  .card-description h4 {
+  .card-description * {
     font-size: 20px;
   }
   .card-technologies {
@@ -193,10 +187,7 @@ h4:active {
     padding-top: 5px;
   }
 
-  .card-description h1,
-  .card-description h2,
-  .card-description h3,
-  .card-description h4 {
+  .card-description * {
     font-size: 16px;
   }
   .card-technologies {
@@ -229,10 +220,7 @@ h4:active {
   .card-description-width {
     width: 65%;
   }
-  .card-description h1,
-  .card-description h2,
-  .card-description h3,
-  .card-description h4 {
+  .card-description * {
     font-size: 12px;
   }
   .card-technologies {
