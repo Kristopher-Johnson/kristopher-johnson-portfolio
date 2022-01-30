@@ -40,32 +40,64 @@
       },
       {
         "id": "p2",
-        "name": "Hotel Managment System",
-        "description": "Hotel Managment System",
-        "technologies": ["Java"],
-        "tags": [""],
-        "image": [
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Catedral_de_San_Juan%2C_Breslavia%2C_Polonia%2C_2017-12-20%2C_DD_09-11_HDR.jpg/2880px-Catedral_de_San_Juan%2C_Breslavia%2C_Polonia%2C_2017-12-20%2C_DD_09-11_HDR.jpg"
+        "name": "Discover Northumberland Android App",
+        "description": "<h1>This app was developed as part of a team project that i participated in whilst at university. The project was designed to simulate a real world scenario. </h1><ul>This involved:<li>Weekly meeting to discuss the project</li><li>Meeting with clients</li><li>Designing, Devloping and Documenting all stages of the project</li></ul><h1>The assignment was to create an app that would assist tourist find their way around Northumberland and give them a list of possible locations to visit.</h1><h1></h1>",
+        "technologies": [
+          "Qt",
+          "C++",
+          "SQL",
+          "PHP",
+          "HTML",
+          "CSS",
+          "JavaScript"
         ],
-        "github": "https://github.com/Kristopher-Johnson/kristopher-johnson-portfolio/tree/master"
+        "tags": [
+          "Mobile App",
+          "Tourism App",
+          "Android",
+          "Web Site",
+          "Web Development"
+        ],
+        "image": [
+          "https://firebasestorage.googleapis.com/v0/b/kristopher-johnson-portfolio.appspot.com/o/Project%20Images%2FDiscover%20Northumberland%2FMain.png?alt=media&token=eecf6c74-b0c4-4bf2-99bd-323e2db75f14",
+          "https://firebasestorage.googleapis.com/v0/b/kristopher-johnson-portfolio.appspot.com/o/Project%20Images%2FDiscover%20Northumberland%2Floginpage.jpg?alt=media&token=796ef856-67cf-42c6-9431-a4e980dae154",
+          "https://firebasestorage.googleapis.com/v0/b/kristopher-johnson-portfolio.appspot.com/o/Project%20Images%2FDiscover%20Northumberland%2Fregisterpage.jpg?alt=media&token=2401e973-846c-44fa-a3d9-283bbf79a084",
+          "https://firebasestorage.googleapis.com/v0/b/kristopher-johnson-portfolio.appspot.com/o/Project%20Images%2FDiscover%20Northumberland%2FNav.png?alt=media&token=f6426378-cd51-4afb-b144-827240a1e084",
+          "https://firebasestorage.googleapis.com/v0/b/kristopher-johnson-portfolio.appspot.com/o/Project%20Images%2FDiscover%20Northumberland%2FSet%20of%20public%20routes.png?alt=media&token=be33f792-9d04-45cf-99cc-16ac07de0fd6",
+          "https://firebasestorage.googleapis.com/v0/b/kristopher-johnson-portfolio.appspot.com/o/Project%20Images%2FDiscover%20Northumberland%2FRoute%20Planning%20Main.png?alt=media&token=cb10cb68-5381-40eb-a333-05722295842b",
+          "https://firebasestorage.googleapis.com/v0/b/kristopher-johnson-portfolio.appspot.com/o/Project%20Images%2FDiscover%20Northumberland%2FRoute%20Planning%20Expanded%20%E2%80%93%202.png?alt=media&token=c7f8d6f2-5568-4ebe-8ab8-4902e82fba19",
+          "https://firebasestorage.googleapis.com/v0/b/kristopher-johnson-portfolio.appspot.com/o/Project%20Images%2FDiscover%20Northumberland%2Fhomepagetop.PNG?alt=media&token=3202eb4b-e6e9-41f3-9fef-4236509637de",
+          "https://firebasestorage.googleapis.com/v0/b/kristopher-johnson-portfolio.appspot.com/o/Project%20Images%2FDiscover%20Northumberland%2Fhomepagebottom.PNG?alt=media&token=6126c6b5-b0e0-4d24-864a-205becc62f73",
+          "https://firebasestorage.googleapis.com/v0/b/kristopher-johnson-portfolio.appspot.com/o/Project%20Images%2FDiscover%20Northumberland%2Fsupport.PNG?alt=media&token=90c7f1b3-d13d-4733-a966-e8a8bfdd91d9"
+        ],
+        "github": "https://github.com/Adanos020/Team-1-Project/tree/master"
       },
       {
         "id": "p3",
-        "name": "Student Support Application",
-        "description": "This",
-        "technologies": ["Java", "Junit"],
-        "tags": [""],
-        "image": [""],
-        "github": "https://github.com/Kristopher-Johnson/kristopher-johnson-portfolio/tree/master"
+        "name": "Random Password Generator",
+        "description": "<h1>This project was developed as a small part of my university dissertation about password security, its aim was to create passwords that would be secure based on a users specified input</h1><ul>Functionality: <li>Set types of charactors used</li><li>Set length of passwords</li></ul><h1></h1>",
+        "technologies": ["Java"],
+        "tags": ["Java", "Dissertation", "SWT", "Password", "Security"],
+        "image": [
+          "https://firebasestorage.googleapis.com/v0/b/kristopher-johnson-portfolio.appspot.com/o/Project%20Images%2FPassword%20Generator%20Project%2FpasswordGenerator.jpg?alt=media&token=198f5f16-6ff2-4d2d-82b3-0562a1be77df"
+        ],
+        "github": ""
       },
       {
         "id": "p4",
-        "name": "Website about HTML + CSS",
-        "description": "Website about HTML + CSS",
+        "name": "Website about HTML, CSS and JavaScript",
+        "description": "This website was also one of my univeristy projects, i completed this during my first year of university its aim what to educate people on the use of HTML and CSS and the ways in which it can be use to format and style webpages. It also touches upon the use of JavaScript within webpages.</h1><h1>This is quite a basic site by todays standards but when making it i remember staying up all night to get it looking how i wanted in time for my deadline.",
         "technologies": ["HTML", "CSS", "JavaScript"],
-        "tags": [""],
-        "image": "",
-        "github": "https://github.com/Kristopher-Johnson/kristopher-johnson-portfolio/tree/master"
+        "tags": ["HTML", "CSS", "JavaScript", "Web Site"],
+        "image": [
+          "https://firebasestorage.googleapis.com/v0/b/kristopher-johnson-portfolio.appspot.com/o/Project%20Images%2FCSC1026-Website%2FhtmlWebHomepage.PNG?alt=media&token=d40d882c-20a8-43bc-9f55-1600ddb220f6",
+          "https://firebasestorage.googleapis.com/v0/b/kristopher-johnson-portfolio.appspot.com/o/Project%20Images%2FCSC1026-Website%2Fhtmlpage.PNG?alt=media&token=f1fef0c2-a10f-4404-bcdf-e0eac0e1a563",
+          "https://firebasestorage.googleapis.com/v0/b/kristopher-johnson-portfolio.appspot.com/o/Project%20Images%2FCSC1026-Website%2Fhtmltags.PNG?alt=media&token=70f2a45d-3372-4195-bc1f-020422014934",
+          "https://firebasestorage.googleapis.com/v0/b/kristopher-johnson-portfolio.appspot.com/o/Project%20Images%2FCSC1026-Website%2FcssVersions.PNG?alt=media&token=f1ef7dcb-bf0f-4b2c-9f90-be9596daa5e2",
+          "https://firebasestorage.googleapis.com/v0/b/kristopher-johnson-portfolio.appspot.com/o/Project%20Images%2FCSC1026-Website%2FcssTags.PNG?alt=media&token=ba05171d-21e8-427c-a82f-b91aba204066",
+          "https://firebasestorage.googleapis.com/v0/b/kristopher-johnson-portfolio.appspot.com/o/Project%20Images%2FCSC1026-Website%2Fjava.PNG?alt=media&token=62964870-c681-415b-b351-894134f1ec0c"
+        ],
+        "github": ""
       }
     ]
   },

@@ -7,7 +7,10 @@
   border-color: aqua;
   display: flex;
   justify-content: space-between;
-  min-width: 1000px;
+  justify-self: center;
+
+  width: 1000px;
+  /* max-width: 1000px; */
 }
 
 .inputs {

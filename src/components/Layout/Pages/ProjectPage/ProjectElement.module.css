@@ -52,7 +52,7 @@
 .card-main img {
   /* width: 100px; */
   height: 130px;
-  max-width: 130px;
+  width: 130px;
   border-radius: 0 0 20px 0;
 }
 
@@ -64,15 +64,17 @@
   overflow-y: hidden;
   white-space: normal;
   text-overflow: ellipsis;
+  margin-top: 5px;
 }
 
-.card-description h1,
-.card-description h2,
-.card-description h3,
-.card-description h4 {
-  margin-top: 10px;
+.card-description * {
+  /* margin-top: 10px; */
   font-size: 19px;
   font-weight: normal;
+}
+.card-description li {
+  margin-left: 10px;
+  list-style: inside;
 }
 
 .card-list {
@@ -118,7 +120,9 @@
   .card-list li {
     font-size: 12px;
   }
-  .card-description h1 {
+
+  .card-description *,
+  .card-description li {
     font-size: 12px;
   }
   .card-main .card-description {
@@ -127,7 +131,7 @@
     grid-column: 1/2;
     grid-row: 2/3;
     width: 100%;
-    height: 105px;
+    height: 110px;
   }
   .card-main .card-list {
     font-size: 12px;
@@ -149,14 +153,17 @@
   .card-header {
     margin-bottom: 5px;
   }
-  .card-header h1,
-  .card-header p {
-    font-size: 18px;
+  .card-description * {
+    font-size: 10px;
   }
 }
 @media (max-width: 350px) {
   .github {
     font-size: 9px;
     margin-right: 10px;
+  }
+  .card-main .card-description {
+    margin-top: 0;
+    height: 92px;
   }
 }

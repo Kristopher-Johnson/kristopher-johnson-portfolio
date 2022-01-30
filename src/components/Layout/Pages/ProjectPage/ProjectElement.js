@@ -88,17 +88,17 @@ const ProjectElement = (props) => {
   // console.log(technologiesOptionArray);
 
   function Item(props) {
-    console.log(props.item);
+    // console.log(props.item);
     return (
       <img
         key={props.item}
         src={props.item}
         alt=""
-        // onError={({ currentTarget }) => {
-        //   currentTarget.onerror = null;
-        //   currentTarget.src =
-        //     "https://upload.wikimedia.org/wikipedia/commons/archive/a/ac/20070325222640%21No_image_available.svg";
-        // }}
+        onError={({ currentTarget }) => {
+          currentTarget.onerror = null;
+          currentTarget.src =
+            "https://upload.wikimedia.org/wikipedia/commons/archive/a/ac/20070325222640%21No_image_available.svg";
+        }}
       />
     );
   }
@@ -125,7 +125,11 @@ const ProjectElement = (props) => {
                 {truncateTechnologies(technologiesOptionArray)}
               </section>
               <img
-                src={props.image[0]}
+                src={
+                  props.image[0] === undefined
+                    ? "https://upload.wikimedia.org/wikipedia/commons/archive/a/ac/20070325222640%21No_image_available.svg"
+                    : props.image[0]
+                }
                 alt=""
                 onError={({ currentTarget }) => {
                   currentTarget.onerror = null;
@@ -159,9 +163,11 @@ const ProjectElement = (props) => {
                   </div>
 
                   <div className={styles.github}>
-                    <a href={props.github} target="_blank" rel="noreferrer">
-                      <h4>Github</h4>
-                    </a>
+                    {props.github && (
+                      <a href={props.github} target="_blank" rel="noreferrer">
+                        <h4>Github</h4>
+                      </a>
+                    )}
                   </div>
                 </div>
                 <div className={styles["card-description"]}>
@@ -173,11 +179,17 @@ const ProjectElement = (props) => {
                 </div>
               </div>
 
-              <Carousel className={styles["card-image"]}>
-                {props.image.map((item) => (
-                  <Item key={item} item={item} />
-                ))}
-              </Carousel>
+              {props.image.length <= 1 ? (
+                <div className={styles["card-image"]}>
+                  <Item key={props.image} item={props.image} />
+                </div>
+              ) : (
+                <Carousel className={styles["card-image"]}>
+                  {props.image.map((item) => (
+                    <Item key={item} item={item} />
+                  ))}
+                </Carousel>
+              )}
             </main>
           </div>
         </Card>

@@ -7,7 +7,6 @@ import * as MUIIcon from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import * as MUI from "@mui/material";
 import { useState } from "react";
-// import LoadingButton from "@mui/lab/LoadingButton";
 
 const Header = (props) => {
   const [downloadSnackbar, setDownloadSnackbar] = useState(false);
@@ -31,10 +30,7 @@ const Header = (props) => {
   const onDownload = () => {
     const link = document.createElement("a");
     link.download = `Kristopher_Johnson_CV.pdf`;
-    link.href = "./text.txt";
-    // link.href = "Kristopher_Johnson_CV_v4.pdf";
-    // const file = new Blob([text], { type: type });
-    // link.href = URL.createObjectURL(file);
+    link.href = "Kristopher_Johnson_CV_v5_portfolio.pdf";
     link.click();
     handleCvClickSnackbar(true);
     // handleCvClickLoading(true);

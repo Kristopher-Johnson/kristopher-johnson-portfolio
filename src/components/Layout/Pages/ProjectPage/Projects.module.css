@@ -16,4 +16,5 @@
 
 .inline {
   border-color: aqua;
+  display: grid;
 }
