@@ -37,7 +37,7 @@
 }
 
 .card-main section {
-  text-align: justify;
+  text-align: left;
   margin-right: 1%;
 }
 .card-main .card-list {
@@ -109,7 +109,7 @@
 
 @media (max-width: 600px) {
   .card-header {
-    font-size: 13px;
+    font-size: 11px;
   }
   .card-main {
     display: grid;
@@ -125,8 +125,7 @@
   .card-description li {
     font-size: 12px;
   }
-  .card-main .card-description {
-    text-align: left;
+  .card-description {
     display: flex;
     grid-column: 1/2;
     grid-row: 2/3;
